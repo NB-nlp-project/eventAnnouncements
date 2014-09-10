@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>库存管理</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="css/default.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar-inner">
+    	<p class="user-tool">欢迎您，管理员！<a href="#">退出</a></p>
+    	<h1>智慧交通后台管理系统</h1>
+    </div>
+    <div class="container">
+
+    	<!-- 左菜单 -->
+    	<div class="sidebar" id="sidebar">
+    		<div class="item active">
+    			<a href="#" class="title">今日闪购管理</a>
+    			<ul>
+                    <li><a href="add-commodity.html">发布闪购商品</a></li>
+                    <li><a href="commodity-list.html">商品列表</a></li>
+                    <li><a href="get-commodity-list.html">提货管理</a></li>
+                    <li><a href="inventory-list.html" class="active">库存管理</a></li>
+    			</ul>
+    			<span class="selected"></span>
+    		</div>
+    		<div class="item open">
+    			<a href="#" class="title">便民服务管理</a>
+    			<ul>
+    				<li><a href="#">文明拍客</a></li>
+    				<li><a href="#">失物招领</a></li>
+    			</ul>
+    			<span class="selected"></span>
+    		</div>
+    		<div class="item open">
+    			<a href="#" class="title">公员管理</a>
+    			<ul>
+    				<li><a href="#">公员列表</a></li>
+    			</ul>
+    			<span class="selected"></span>
+    		</div>
+    	</div>
+
+    	<!-- 主内容 -->
+		<div class="content" id="content">
+
+            <!-- 标题 -->
+			<h3 class="title">库存管理</h3>
+            
+            <!-- portlet box -->
+            <div class="portlet-box">
+                <div class="portlet-box-title">闪购商品信息</div>
+                <div class="portlet-box-body">
+                    <div class="commodity-info">
+                        <div class="commodity-img">
+                            <img src="http://img0.bdstatic.com/img/image/shouye/dengni47.jpg" alt="" />
+                        </div>
+                        <div class="commodity-content">
+                            <h3>大宝天天见洗发水</h3>
+                            <p>共售出：1564件</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- searchbar -->
+            <div class="searchbar">
+                <label>选择线路：</label>
+                <select>
+                    <option value="0">1号线</option>
+                </select>
+                <label>选择站点：</label>
+                <select>
+                    <option value="0">东口门</option>
+                    <option value="1">西口门</option>
+                    <option value="1">南口门</option>
+                    <option value="1">北口门</option>
+                </select>
+                <input type="submit" value="搜索" class="defaultBtn btn-sm btn-green" />
+            </div>
+
+            <!-- table -->
+            <table class="table">
+                <tr>
+                    <th class="check-room"><input type="checkbox" /></th>
+                    <th>线路</th>
+                    <th>站点名称</th>
+                    <th>总数量</th>
+                    <th>库存量</th>
+                    <th class="handle-w">操作</th>
+                </tr>
+                <tr>
+                    <td class="check-room"><input type="checkbox" /></td>
+                    <td>线路1</td>
+                    <td>东口门站</td>
+                    <td>200</td>
+                    <td>20</td>
+                    <td>
+                        <a href="#" class="defaultBtn btn-sm btn-blue">编辑</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="check-room"><input type="checkbox" /></td>
+                    <td>线路1</td>
+                    <td>东口门站</td>
+                    <td>200</td>
+                    <td>20</td>
+                    <td>
+                        <a href="#" class="defaultBtn btn-sm btn-blue">编辑</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="check-room"><input type="checkbox" /></td>
+                    <td>线路1</td>
+                    <td>东口门站</td>
+                    <td>200</td>
+                    <td>20</td>
+                    <td>
+                        <a href="#" class="defaultBtn btn-sm btn-blue">编辑</a>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- page -->
+            <div class="page">
+                <span class="prev">上一页</span>
+                <span class="cur">1</span>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#" class="next">下一页</a>
+            </div>
+            
+            <!-- h20 -->
+            <div class="h20"></div>
+		</div>
+
+    </div>
+
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/default.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+<title>`get title`</title>
+	<link type="text/css" href="@{'/public/backStage/css/main.css'}" rel="stylesheet" />
+	<link type="text/css" href="@{'/public/backStage/css/default.css'}" rel="stylesheet" />
+	<link href="@{'/public/css/comm.css'}" rel="stylesheet">
+	<link href="@{'/public/css/default.css'}" rel="stylesheet">
+	`get moreCSSLink
+</head>
+<body `get bodyStyle`>
+`t headTag()
+`doLayout
+<script src="@{'/public/backStage/js/jquery-1.9.1.min.js'}"></script>
+<script src="@{'/public/frontEnd/js/quo-2.3.6.min.js'}"></script>
+<script type="text/javascript" src="@{'/public/js/min/do.js'}" data-cfg-autoload="true"></script>
+<script src="@{'/public/backStage/js/default.js'}"></script>
+<script src="@{'/public/js/main/zebra_datepicker.js'}"></script>
+<script src="@{'/public/js/main/core.js'}"></script>
+<script src="@{'/public/js/back_editgood.js'}"></script>
+<script src="@{'/public/js/Tyz.js'}"></script>
+<script src="@{'/public/js/back_fastbuy.js'}"></script>
+`get moreJSLink
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>闪购商品列表</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="css/default.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<script src="src/My97DatePicker/WdatePicker.js"></script>
+</head>
+<body>
+    <div class="navbar-inner">
+    	<p class="user-tool">欢迎您，管理员！<a href="#">退出</a></p>
+    	<h1>智慧交通后台管理系统</h1>
+    </div>
+    <div class="container">
+
+    	<!-- 左菜单 -->
+    	<div class="sidebar" id="sidebar">
+    		<div class="item active">
+    			<a href="#" class="title">今日闪购管理</a>
+    			<ul>
+            <li><a href="add-commodity.html">发布闪购商品</a></li>
+            <li><a href="commodity-list.html" class="active">商品列表</a></li>
+            <li><a href="get-commodity-list.html">提货管理</a></li>
+            <li><a href="inventory-list.html">库存管理</a></li>
+    			</ul>
+    			<span class="selected"></span>
+    		</div>
+    		<div class="item open">
+    			<a href="#" class="title">便民服务管理</a>
+    			<ul>
+    				<li><a href="#">文明拍客</a></li>
+    				<li><a href="#">失物招领</a></li>
+    			</ul>
+    			<span class="selected"></span>
+    		</div>
+    		<div class="item open">
+    			<a href="#" class="title">公员管理</a>
+    			<ul>
+    				<li><a href="#">公员列表</a></li>
+    			</ul>
+    			<span class="selected"></span>
+    		</div>
+    	</div>
+
+    	<!-- 主内容 -->
+		  <div class="content" id="content">
+            
+            <!-- 标题 -->
+            <h3 class="title add-commodity-title">闪购商品列表</h3>
+
+            <!-- table -->
+            <table class="table">
+                <tr>
+                    <th class="check-room"><input type="checkbox" /></th>
+                    <th>商品名称</th>
+                    <th>商品编号</th>
+                    <th>原价</th>
+                    <th>闪购价</th>
+                    <th>总数量</th>
+                    <th>库存量</th>
+                    <th>售出量</th>
+                    <th>闪购时间</th>
+                    <th class="handle-w1">操作</th>
+                </tr>
+                <tr>
+                    <td class="check-room"><input type="checkbox" /></td>
+                    <td>大宝天天见洗发水</td>
+                    <td>SB0000000001</td>
+                    <td>200</td>
+                    <td>5.8</td>
+                    <td>1000</td>
+                    <td>320</td>
+                    <td>680</td>
+                    <td>2014/07/19 - 2014/07/25</td>
+                    <td>
+                        <a href="#" class="defaultBtn btn-sm btn-blue">编辑</a>
+                        <a href="#" class="defaultBtn btn-sm btn-green">库存管理</a>
+                        <a href="#" class="defaultBtn btn-sm btn-red">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="check-room"><input type="checkbox" /></td>
+                    <td>大宝天天见洗发水</td>
+                    <td>SB0000000001</td>
+                    <td>200</td>
+                    <td>5.8</td>
+                    <td>1000</td>
+                    <td>320</td>
+                    <td>680</td>
+                    <td>2014/07/19 - 2014/07/25</td>
+                    <td>
+                        <a href="#" class="defaultBtn btn-sm btn-blue">编辑</a>
+                        <a href="#" class="defaultBtn btn-sm btn-green">提货管理</a>
+                        <a href="#" class="defaultBtn btn-sm btn-green">库存管理</a>
+                        <a href="#" class="defaultBtn btn-sm btn-red">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="check-room"><input type="checkbox" /></td>
+                    <td>大宝天天见洗发水</td>
+                    <td>SB0000000001</td>
+                    <td>200</td>
+                    <td>5.8</td>
+                    <td>1000</td>
+                    <td>320</td>
+                    <td>680</td>
+                    <td>2014/07/18 - 2014/07/19</td>
+                    <td>
+                        <a href="#" class="defaultBtn btn-sm btn-green">提货管理</a>
+                        <a href="#" class="defaultBtn btn-sm btn-green">库存管理</a>
+                        <a href="#" class="defaultBtn btn-sm btn-red">删除</a>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- page -->
+            <div class="page">
+                <span class="prev">上一页</span>
+                <span class="cur">1</span>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#" class="next">下一页</a>
+            </div>
+            
+            <!-- h20 -->
+            <div class="h20"></div>
+		</div>
+
+    </div>
+
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/default.js"></script>
+</body>
+</html>

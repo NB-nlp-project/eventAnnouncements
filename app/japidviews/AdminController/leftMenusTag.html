@@ -1,0 +1,15 @@
+<div class="sidebar">
+	<div class="item open">
+		<a href="#" class="title">系统管理</a>
+		<ul>
+            <li><a href="@{AdminController.personCenter()}" ${"personCenter".equals(request.actionMethod)?" name='index'":""}>账号管理</a></li>
+		</ul>
+	</div>
+	<div class="item open">
+		<a href="#" class="title">今日闪购管理</a>
+		<ul>
+            <li><a href="@{AdminController.flashPurchase()}" ${"flashPurchase".equals(request.actionMethod)?" name='index'":""}>发布闪购商品</a></li>
+            <li><a href="@{AdminController.flashPurchaseList()}" ${"flashPurchaseList".equals(request.actionMethod)?" name='index'":""}>商品列表</a></li>
+		</ul>
+	</div>
+</div>

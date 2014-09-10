@@ -1,0 +1,58 @@
+`import models.Announcements
+
+`args List<Announcements> announcementList,int currentPage,int totalPage
+
+`extends backStageLayout
+`set title`后台管理-闪购商品列表`
+`set moreJSLink
+<script>
+    main.setSidebarHover("index");
+</script>
+`
+<div class="navbar-inner">
+</div>
+<div class="container">
+	<!-- 左菜单 -->
+	`t leftMenusTag()
+    	<!-- 主内容 -->
+		  <div class="content" id="content">
+            <!-- 标题 -->
+            <h3 class="title add-commodity-title">闪购商品列表</h3>
+			*{<div class="searchbar">
+                <input type="text" class="defaultInput">
+                <input type="submit" value="搜索" class="defaultBtn btn-green" />
+            </div>}*
+            <!-- table -->
+            <table class="table">
+                <tr>
+                    <th>活动名称</th>
+                    <th>开始时间</th>
+                    <th>结束时间</th>
+                    <th class="handle-w1">操作</th>
+                </tr>
+                `if(!announcementList.isEmpty()){
+                `for(Announcements announcements :announcementList){
+                	<tr>
+                    <td>${announcements.title}</td>
+                    <td>${announcements.startTime}</td>
+                    <td>${announcements.endTime}</td>
+                    <td>
+                        <a id="flashPurchase" href="@{AdminController.flashPurchase(announcements.id)}" class="defaultBtn btn-sm btn-blue">编辑</a>
+                        <a id="inventorylist" href="@{AdminController.inventoryList(announcements.id)}" class="defaultBtn btn-sm btn-green">库存管理</a>
+                        <a id="del" href="@{AdminController.deleteFastGood(announcements.id)}" class="defaultBtn btn-sm btn-red">删除</a>
+                    </td>
+                </tr>
+                `}
+                `}
+            </table>
+            `t pagination(getUrl(),"page",currentPage,totalPage,null)
+            `def getUrl()
+            	@{AdminController.flashPurchaseList()}
+            `
+            <!-- h20 -->
+            <div class="h20"></div>
+		</div>
+
+    </div>
+</body>
+</html>

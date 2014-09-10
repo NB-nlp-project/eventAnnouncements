@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="telephone=no" name="format-detection" />
+	<title>线路查询详细</title>
+	<link href="../css/main.css" rel="stylesheet">
+</head>
+<body>
+<section class="line-detail-cont">
+	<div class="ld-important-info">
+		<div class="title">
+			<span class="r">票价：4元</span>
+			高桥西——西门口
+		</div>
+		<ul class="ld-important-info-list">
+			<li><label>站<span class="txt2to4">数</span>：</label>9站</li>
+			<li><label>站间距离：</label>6458米</li>
+			<li><label>途<span class="txt2to4">径</span>：</label>高桥西、高桥、高桥、高桥、高桥、高桥、高桥、高桥、高桥、高桥、高桥</li>
+			<li><label>换<span class="txt2to4">乘</span>：</label>无</li>
+		</ul>
+	</div>
+	<div class="line-detail-txt-cont">
+		<ul class="tab-title">
+			<li id="ld_nav_0" class="cur">高桥西</li>
+			<li id="ld_nav_1">西门口</li>
+		</ul>
+		<div class="line-dt-c" id="ld_cont_0">
+			<div class="line-sm-time">
+				<ul>
+					<li>
+						<div class="w1">上行首班车</div>
+						<div class="w2">往东环南路方向</div>
+						<div class="w3">6:30:00</div>
+					</li>
+					<li>
+						<div class="w1">上行末班车</div>
+						<div class="w2">往东环南路方向</div>
+						<div class="w3">21:30:00</div>
+					</li>
+					<li>
+						<div class="w1">下行首班车</div>
+						<div class="w2">往高桥西方向</div>
+						<div class="w3">7:00:00</div>
+					</li>
+					<li>
+						<div class="w1">下行末班车</div>
+						<div class="w2">往高桥西方向</div>
+						<div class="w3">21:30:00</div>
+					</li>
+				</ul>
+			</div>
+			<ul class="ld-important-info-list">
+				<li><label>站点介绍：</label>高桥西站位于大西坝河东岸，规划大西坝路的西侧。车站为地上二层岛式车站，车站总建筑面积为6994㎡。车站出入口均在地面站厅层，东侧为主要出入口，面向规划道路；西侧设有2个次要出入口。</li>
+				<li><label>周边景点：</label>高桥基督教堂、鄮西书画院</li>
+				<li><label>公交换乘：</label>无</li>
+			</ul>
+		</div>
+		<div class="line-dt-c" id="ld_cont_1" style="display:none;">
+			<div class="line-sm-time">
+				<ul>
+					<li>
+						<div class="w1">上行首班车</div>
+						<div class="w2">往东环南路方向</div>
+						<div class="w3">6:30:00</div>
+					</li>
+					<li>
+						<div class="w1">上行末班车</div>
+						<div class="w2">往东环南路方向</div>
+						<div class="w3">21:30:00</div>
+					</li>
+					<li>
+						<div class="w1">下行首班车</div>
+						<div class="w2">往高桥西方向</div>
+						<div class="w3">7:00:00</div>
+					</li>
+					<li>
+						<div class="w1">下行末班车</div>
+						<div class="w2">往高桥西方向</div>
+						<div class="w3">21:30:00</div>
+					</li>
+				</ul>
+			</div>
+			<ul class="ld-important-info-list">
+				<li><label>站点介绍：</label>西门口西门口西门口西门口西门口西门口西门口西门口西门口西门口西门口西门口西门口西门口西门口西门口西门口西门口西门口西门口西门口西门口西门口西门口西门口西门口西门口。</li>
+				<li><label>周边景点：</label>西门口、西门口、西门口</li>
+				<li><label>公交换乘：</label>11路飞机</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<script src="../js/main.js"></script>
+<script>
+    dom.tab({
+        tab_head : "ld_nav_",
+        tab_cont : "ld_cont_",
+        column : 2,
+        hover_css : "cur"
+    });
+</script>
+</body>
+</html>

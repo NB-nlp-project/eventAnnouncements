@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+body{background: #444;}
+
+/* logo */
+.login .logo{width: 300px;margin: 0 auto;margin-top: 60px;padding: 15px;text-align: center;line-height: 2;font-size: 26px;color:#fff;font-weight: 400;}
+
+/* login content */
+.login .content{background-color:#fff;width: 291px;margin: 0 auto;margin-bottom: 0px;padding:20px 30px 30px;}
+.login .content .form-title{font-weight: 300;margin-bottom: 20px;font-size: 18px;}
+.login .content .control-label{display:none;}
+.login .content .input-icon{border-left: 2px solid #35aa47;margin-bottom:20px;}
+.input-icon i{color: #ccc;display: block;position: absolute;z-index: 1;margin: 9px 2px 4px 10px;width: 16px;height: 16px;font-size: 16px;text-align: center;}
+.input-icon i.icon-user{background-position:-5px -2px;}
+.input-icon i.icon-lock{background-position:-25px -2px;}
+.login .content .m-wrap{
+	width:249px;color: #333;outline: 0;height: 20px;padding: 6px 6px 6px 30px;line-height: 20px;font-size: 12px;font-weight: normal;border: 1px solid #e5e5e5;border-left:none;vertical-align: top;background-color: #fff;
+}
+.login .content .m-wrap:focus{
+	border:1px #aaa solid;border-left:none;
+	-webkit-transition: all .2s ease-in 0;
+	-o-transition: all .2s ease-in 0;
+	transition: all .2s ease-in 0;
+}
+.login .form-actions{clear:both;overflow: hidden;*zoom:1;}
+.login .form-actions .btn{background:#35aa47;padding:5px 10px;float:right;color:#fff;border:none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

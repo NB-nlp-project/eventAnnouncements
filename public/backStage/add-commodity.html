@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>发布闪购商品</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="css/default.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<script src="src/My97DatePicker/WdatePicker.js"></script>
+</head>
+<body>
+    <div class="navbar-inner">
+    	<p class="user-tool">欢迎您，管理员！<a href="#">退出</a></p>
+    	<h1>智慧交通后台管理系统</h1>
+    </div>
+    <div class="container">
+
+    	<!-- 左菜单 -->
+    	<div class="sidebar" id="sidebar">
+    		<div class="item active">
+    			<a href="#" class="title">今日闪购管理</a>
+    			<ul>
+                    <li><a href="add-commodity.html" class="active">发布闪购商品</a></li>
+                    <li><a href="commodity-list.html">商品列表</a></li>
+    				<li><a href="get-commodity-list.html">提货管理</a></li>
+    				<li><a href="inventory-list.html">库存管理</a></li>
+    			</ul>
+    			<span class="selected"></span>
+    		</div>
+    		<div class="item open">
+    			<a href="#" class="title">便民服务管理</a>
+    			<ul>
+    				<li><a href="#">文明拍客</a></li>
+    				<li><a href="#">失物招领</a></li>
+    			</ul>
+    			<span class="selected"></span>
+    		</div>
+    		<div class="item open">
+    			<a href="#" class="title">公员管理</a>
+    			<ul>
+    				<li><a href="#">公员列表</a></li>
+    			</ul>
+    			<span class="selected"></span>
+    		</div>
+    	</div>
+
+    	<!-- 主内容 -->
+		<div class="content" id="content">
+            
+            <!-- 标题 -->
+            <h3 class="title add-commodity-title">发布闪购商品</h3>
+
+            <!-- pbox-form-list -->
+            <div class="pbox-form-list">
+                <ul>
+                    <li>
+                       <label>闪购时间：</label>
+                       <div class="pbox-controls">
+                           <input type="text" class="defaultInput sm1" onClick="WdatePicker()">
+                           <span class="text-inline">到</span>
+                           <input type="text" class="defaultInput sm1" onClick="WdatePicker()">
+                       </div>
+                    </li>
+                    <li>
+                       <label>线路选择：</label>
+                       <div class="pbox-controls">
+                           <select>
+                               <option value="0">线路一</option>
+                           </select>
+                       </div>
+                    </li>
+                    <li>
+                       <label>商品名称：</label>
+                       <div class="pbox-controls">
+                           <input type="text" class="defaultInput">
+                       </div>
+                    </li>
+                    <li>
+                       <label>商品编号：</label>
+                       <div class="pbox-controls">
+                           <input type="text" class="defaultInput">
+                       </div>
+                    </li>
+                    <li class="clr">
+                       <label>原价：</label>
+                       <input type="number" class="defaultInput sm2 pbox-c-input">
+                       <label class="m-l--20px">闪购价：</label>
+                       <input type="number" class="defaultInput sm2 pbox-c-input">
+                    </li>
+                    <li class="clr">
+                        <label>图片：</label>
+                        <div class="pbox-controls">
+
+                            <!-- 自行使用熟悉的插件，如swfupload等 -->
+                            <input type="file" class="defaultInputFile" />
+                            <div class="File-images-list">
+                                <img src="http://img0.bdstatic.com/img/image/shouye/dengni47.jpg" alt="" />
+                                <img src="http://img0.bdstatic.com/img/image/shouye/dengni47.jpg" alt="" />
+                                <img src="http://img0.bdstatic.com/img/image/shouye/dengni47.jpg" alt="" />
+                            </div>
+
+                        </div>
+                    </li>
+                    <li>
+                        <label>数量：</label>
+                        <div class="pbox-controls">
+                            <input type="number" class="defaultInput sm2">
+                        </div>
+                    </li>
+                    <li>
+                        <label>详情介绍：</label>
+                        <div class="pbox-controls">
+                            <textarea class="defaultTextarea" cols="30" rows="10"></textarea>
+                        </div>
+                    </li>
+                </ul>
+                <div class="pbox-controls">
+                    <input type="submit" value="确定" class="defaultBtn" />
+                </div>
+            </div>
+            
+            <!-- h20 -->
+            <div class="h20"></div>
+		</div>
+
+    </div>
+
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/default.js"></script>
+</body>
+</html>

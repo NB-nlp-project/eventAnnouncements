@@ -1,0 +1,95 @@
+@charset "utf-8";
+body,input,textarea,select{font-size:12.5px; color:#555; font-family:Arial, sans-serif;}
+body,h1,h2,h3,h4,h5,h6,ul,ol,dl,dd,form{margin:0;}
+ul,ol{padding-left:0; list-style-type:none;}
+p{margin-top:0; margin-bottom:.4em;}
+a{text-decoration:none; color:#555; outline:none;}
+input,textarea,img{border:0;}
+
+/*双栏自适应*/
+.cell{display:table-cell; *display:inline-block; width:2000px; *width:auto;}
+/*浮动清除*/
+.fix{*zoom:1;}.fix:after{display:block; content:"$"; height:0; clear:both; overflow:hidden; visibility:hidden;}
+
+.mr15{margin-right:1.5em;}.mr1{margin-right:1em;}.mr05{margin-right:.5em;}.ml05{margin-left:.5em;}.ml1{margin-left:1em;}.mt05{margin-top:.5em;}.mt2{margin-top:2em;}.mt1{margin-top:1em;}.mb05{margin-bottom:.5em;} .mb1{margin-bottom:1em;}
+.pt05{padding-top:0.5em;}.pt1{padding-top:1em;}.pb05{padding-bottom:.5em;}.pb1{padding-bottom:1em;}.pl2{padding-left:2em;}.p1{padding:1em;}.p05{padding:0.5em;}
+.w63{width:63px;}.pct10{width:10%;}.pct85{width:85%;}.pct75{width:75%;}.pct60{width:60%;}.pct50{width:49.9%;}
+.dib{display:inline-block;}
+.ovh{overflow:hidden;}
+.rel{position:relative;}
+.l{float:left;}.r{float:right;}
+.tc{text-align:center;}.tl{text-align:left;}.tr{text-align:right;}
+.vb{vertical-align:bottom;}
+.bge5{background-color:#E5E5E5;}.bgwh{background-color:#fff;}.bgf5{background-color:#FF5001;}.bgf9{background-color:#F9F9F9}
+.g9{color:#999;}.g5{color:#555;}.g0{color:#000;}.wh{color:#fff;}.cf5{color:#FF5001;}.cr{color:#f30;}.cb{color:#007AFF;}.cg{color:#2CBB14;}.co{color:#FF7800;}
+.f14{font-size:14px;}.f16{font-size:16px;}.f18{font-size:18px;}.f20{font-size:20px;}
+.b{font-weight:bold;}
+.lh16{line-height:16px;}.lh18{line-height:18px;}.lh20{line-height:20px;}.h20{height:20px;}.h26{height:26px;}.h30{height:30px;}
+.tdl{text-decoration:line-through;}
+.bbc{border-bottom:1px solid #ccc;}
+.bbe5{border-bottom:1px solid #e5e5e5;}
+.bdd1{border:1px solid #d1d1d1;}
+.bdrad05{border-radius:.5em;}.bdrad1{border-radius:1.5em;}
+.brsh2{box-shadow:2px 2px 2px #999;}
+
+.content_page{margin-top:1em;}
+.product_show_box{padding:.5em;  text-align:center;}
+.product_show_area{padding:.3em; background-color:#fff;}
+.orangebtn,.orangebtn2,.fontgraybtn,.fontgraybtn2,.pinkbtn,.skybluebtn,.skybluebtn,.darkbluebtn{display:inline-block;padding:.8em 2.5em; color:#fff; font-weight:bold;}
+.orangebtn,.orangebtn2{background-color:#FF5001;}
+.whbtn2{display:inline-block; border:1px solid #555; color:#555; font-weight:bold;}
+.orgbtn{display:inline-block; border:1px solid #FF5001; color:#FF5001;}
+.greennbtn{display:inline-block; border:1px solid #2CBB14; color:#2CBB14;}
+.gybtn{display:inline-block; border:1px solid #999; color:#999;}
+.orangebtn2, .fontgraybtn2{padding:0.5em 1em;}
+.whbtn2, .orgbtn, .greennbtn, .gybtn{padding:0.3em 0.5em;}
+.fontgraybtn,.fontgraybtn2{background-color:#999;}
+.pinkbtn{background-color:#FF6D6D;}
+.skybluebtn,.skybluebtn2{background-color:#00A0EA;}
+.skybluebtn{padding:1em 7.8em;}
+.skybluebtn2{padding:.5em;}
+.darkbluebtn{background-color:#3F4A67;}
+.whbtn{display:inline-block; padding:0.15em 0.5em; border:1px solid #ccc; color:#999; font-size:14px;}
+.greenbtn,.frontgraybtn2{display:inline-block; padding:0.8em 3em; font-weight:bold;}
+.greenbtn{background-color:#0FBD03; color:#fff;}
+.frontgraybtn2{background-color:#E7E7E7; border:1px solid #ccc; color:#555;}
+.num_input{width:9%; height:18px; border:1px solid #d1d1d1; text-align:center;}
+.footer,.tm_heater{width:100%; padding:1em; background:rgba(242,242,242,.8); position:fixed; left:0; right:0; z-index:1000;}
+.footer{bottom:0;border-top:1px solid #d1d1d1;}
+.tm_heater{top:0;border-bottom:1px solid #d1d1d1; }
+.tm_black,.tm_gray{display:inline-block; padding:0.1em .2em;}
+.tm_black{background-color:#434343;}
+.tm_gray{background-color:#999;}
+.soldout_img{position:absolute; top:0; left:0; z-index:3;}
+.empty_area{padding-top:2em; padding-bottom:2em; background-color:#f2f2f2; color:#999; font-size:18px; font-weight:bold;text-align:center;}
+.myorder_area,.myorder_other_area{padding:1em 1.5em;}
+.myorder_area{background-color:#3F4A67; color:#fff;}
+.myorder_other_area{background-color:#fff;}
+/*图标*/
+.i_address,.i_like,.i_send,.myorder_nav_title,.i_hot,.i_search,.i_address_on{display:inline-block; background:url(../img/sprite.svg) no-repeat;}
+.i_address{width:17px; height:20px; background-position:-92px 0;}
+.i_like{width:15px; height:15px; background-position:-18px -4px;}
+.i_send{width:23px; height:21px; background-position:-47.5px 0; vertical-align:-0.4em;}
+.i_hot{width:18px; height:20px; background-position:0 0; vertical-align:-0.2em;}
+.i_search{width:17px; height:19px; background-position:-109px -2px;}
+.i_address_on{width:25px; height:25px; background-position:-125px 0;}
+.myorder_nav_title{width:112px; height:18px; padding:1px 0 1px 5px; background-position:0 -22px;  color:#fff;}
+.rights_phone{display:inline-block; width:94px; height:97px; background:url(../img/phone.png)0 0 no-repeat;}
+.rights_wechat{display:inline-block; width:94px; height:97px; background:url(../img/wechat.png)0 0 no-repeat;}
+.rights_start{display:inline-block; width:94px; height:97px; background:url(../img/start.png)0 0 no-repeat;}
+.myorder_nav_line{padding-bottom:0.1em; border-bottom:1px solid #007AFF;}
+.invite_title{padding:1em 1.5em 1em; border-bottom:1px solid #d1d1d1; color:#FF6D6D; font-size:20px; font-weight:bold;}
+.invite_area{padding:2em 2.5em;}
+.invite_input{width:90%; height:20px;}
+.ads_add_area ul li{padding:1em 1.5em; border-bottom:1px solid #ccc; font-size:14px;}
+.rights_info_area ul li{padding:.5em 1.5em;}
+.rights_require_textarea{width:98%; line-height:18px;}
+.rights_choice{margin:2em 1.5em 1.5em 2em;}
+.shop_list_area{margin-top:.5em; margin-bottom:.5em; padding:0.5em; border-top:1px dashed #ccc;}
+.shop_enter_p{color:#999; position:absolute; top:2em; right:.5em;}
+.preview_content_area{padding:1em 2em; line-height:20px;}
+.search_box{width:80%; padding:.1em .2em; margin-left:auto; margin-right:auto;}
+.add_score{padding:.3em .5em; background-color:#00A0EA;}
+.bg_vip{min-width:300px; min-height:523px; margin:2% 3%; background-image:url(../img/vip.png); background-repeat:no-repeat;}
+.vip_footer{width:100%; padding:0.5em; background:rgba(242,242,242,.8); position:fixed; left:0; right:0; bottom:0; z-index:1000;}
+.id_wechat{position:absolute; top:10%; left:10%; color:#fff; font-size:14px;}

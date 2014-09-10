@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="telephone=no" name="format-detection" />
+	<title>订单-在线支付</title>
+	<link href="../css/main.css" rel="stylesheet">
+</head>
+<body>
+	<section class="commodity-cont">
+		<div class="prompt">请在下单<span class="time J_CountDownTime"><i class="i-s-clock"></i><span class="m">29</span>分<span class="s">59</span>秒</span>内完成支付，谢谢。</div>
+		<div class="line-box">
+			<div class="line-box-content fix">				
+				<div class="commodity-sm-img"><a href="#"><img src="../img/temp/mm.jpg" alt=""></a></div>
+				<div class="commodity-sm-cont">
+					<h2 class="title"><a href="#">家定制手作MM天然淡水近圆强光小珍珠独家定制手作MM天然淡水近圆强光小珍珠独家定制手作MM</a></h2>
+				</div>				
+			</div>
+			<div class="line-box-content bdde">				
+				<ul class="sum-calculate">
+					<li>
+						<label>数量：</label>
+						<div class="commodity-sm-cont minus-plus-number-tool J_Quantity">
+							<a href="javascript:void(0)" class="minus">-</a>
+							<input type="number" class="mp-number num" value="1" />
+							<a href="javascript:void(0)" class="plus">+</a>
+						</div>
+					</li>
+					<li>
+						<label>库存：</label>
+						<span class="stock-count">41件</span>
+					</li>
+					<li>
+						<label>应付总额：</label>
+						<span class="number">￥<span class="J_price_sum">888.00</span></span>
+					</li>
+				</ul>				
+			</div>
+		</div>
+		<div class="payment-tab" id="J_Tab_checkbox">
+			<p _addr = "addr_1"><input type="checkbox" /><label>快递发货</label></p>
+			<p _addr = "addr_2"><input type="checkbox" checked /><label>上门提货</label></p>
+		</div>
+		<div class="ems" id="addr_1" style="display:none">
+			<div class="searchbar">
+				<label>选择收获地址</label>
+			</div>
+			<ul class="ems-addr-list J_CheckboxList">
+				<li>
+					<div class="w1"><input type="checkbox" checked /></div>
+					<div class="ems-addr-item">
+						<p>张三<span class="ml10">400-888-888</span></p>
+						<p class="addr">宁波市XX区的神奇的地方的神奇的地方的神奇的地方的神奇的地方</p>
+					</div>
+				</li>
+				<li>
+					<div class="w1"><input type="checkbox" /></div>
+					<div class="ems-addr-item">
+						<p>张三<span class="ml10">400-888-888</span></p>
+						<p class="addr">宁波市XX区的神奇的地方的神奇的地方的神奇的地方的神奇的地方</p>
+					</div>
+				</li>
+				<li>
+					<div class="w1"><input type="checkbox" /></div>
+					<div class="ems-addr-item">
+						<p>张三<span class="ml10">400-888-888</span></p>
+						<p class="addr">宁波市XX区的神奇的地方的神奇的地方的神奇的地方的神奇的地方</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="sm-addr-room" id="addr_2">
+			<div class="searchbar">
+				<label>意向提货地点</label>
+				<div class="search-room">
+                	<a href="#"><i class="i-search"></i></a>
+					<input type="text" class="search-input" placeholder="搜索" />
+				</div>
+			</div>
+			<ul class="sm-addr-list J_CheckboxList">
+				<li>
+					<div class="w1"><input type="checkbox" checked /></div>
+					<div class="w2">1号线</div>
+					<div class="w3">东门口站</div>
+					<div class="w4">库存<span class="count">26</span>件</div>
+				</li>
+				<li>
+					<div class="w1"><input type="checkbox" /></div>
+					<div class="w2">1号线</div>
+					<div class="w3">东门口站</div>
+					<div class="w4">库存<span class="count">26</span>件</div>
+				</li>
+				<li>
+					<div class="w1"><input type="checkbox" /></div>
+					<div class="w2">1号线</div>
+					<div class="w3">东门口站</div>
+					<div class="w4">库存<span class="count">26</span>件</div>
+				</li>
+				<li>
+					<div class="w1"><input type="checkbox" /></div>
+					<div class="w2">1号线</div>
+					<div class="w3">东门口站</div>
+					<div class="w4">库存<span class="count">26</span>件</div>
+				</li>
+				<li>
+					<div class="w1"><input type="checkbox" /></div>
+					<div class="w2">1号线</div>
+					<div class="w3">东门口站</div>
+					<div class="w4">库存<span class="count">26</span>件</div>
+				</li>
+				<li>
+					<div class="w1"><input type="checkbox" /></div>
+					<div class="w2">1号线</div>
+					<div class="w3">东门口站</div>
+					<div class="w4">库存<span class="count">26</span>件</div>
+				</li>
+			</ul>
+		</div>
+		<button class="btn buy-now-btn">提交订单</button>
+	</section>
+
+	<script src="../js/main.js"></script>
+	<script>
+		var _tab_types = $query("#J_Tab_checkbox").getElementsByTagName("p"),
+			_addr_1 = $query("#addr_1"),
+			_addr_2 = $query("#addr_2");
+		for(var i=0,j=_tab_types.length;i<j;i++){
+			var _p = _tab_types[i];
+			_p.onclick = function(){
+				var _this = this;
+				var _room_id = _this.getAttribute("_addr");
+
+				_addr_1.style.display = _addr_2.style.display = "none";
+				$query("#"+_room_id).style.display = "block";
+
+				for(var m=0,n=_tab_types.length;m<n;m++){
+					_tab_types[m].getElementsByTagName("input")[0].checked = false;
+				}
+				_this.getElementsByTagName("input")[0].checked = true;
+			};
+		}
+	</script>
+</body>
+</html>

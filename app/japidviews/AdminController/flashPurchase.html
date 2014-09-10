@@ -1,0 +1,154 @@
+`import japidviews.AdminController.leftMenusTag;
+`args Announcements announcements
+`extends backStageLayout
+`set title`后台管理-发布闪购商品`
+`set moreJSLink
+<script type="text/javascript" src="@{'/public/frontEnd/js/swfupload/swfupload/swfupload.js'}"></script>
+<script type="text/javascript" src="@{'/public/frontEnd/js/swfupload/js/swfupload.queue.js'}"></script>
+<script type="text/javascript" src="@{'/public/frontEnd/js/swfupload/js/fileprogress.js'}"></script>
+<script type="text/javascript" src="@{'/public/frontEnd/js/swfupload/js/handlers.js'}"></script>
+<script type="text/javascript" src="@{'/public/js/ueditor/ueditor.config.js'}"></script>
+<script type="text/javascript" src="@{'/public/js/ueditor/ueditor.all.min.js'}"></script>
+<script type="text/javascript">
+var swfu;
+window.onload = function() {
+	var settings = {
+		flash_url : "/public/frontEnd/js/swfupload/swfupload/swfupload.swf",
+		upload_url: "http://121.40.83.194/pic/form",
+		post_params: {
+			"bucketName" : "ningboGo",
+			"source" : "web"
+		},
+		file_post_name : "qqfile",
+		file_size_limit : "100 MB",
+		file_types : "*.*",
+		file_types_description : "All Files",
+		file_upload_limit : 100,
+		file_queue_limit : 0,
+		custom_settings : {
+			progressTarget : "fsUploadProgress",
+			cancelButtonId : "btnCancel"
+		},
+		debug: false,
+
+		// Button settings
+		button_image_url: "../public/img/swfupload_bg.png",	// Relative to the Flash file
+		button_width: "112",
+		button_height: "35",
+		button_placeholder_id: "spanButtonPlaceHolder",
+		button_text: '',
+		button_text_style: ".theFont { font-size: 16; }",
+		button_text_left_padding: 12,
+		button_text_top_padding: 3,
+		button_action : SWFUpload.BUTTON_ACTION.SELECT_FILE, //一次选择一个文件
+		
+		// The event handler functions are defined in handlers.js
+		file_queued_handler : fileQueued,
+		file_queue_error_handler : fileQueueError,
+		file_dialog_complete_handler : fileDialogComplete,
+		upload_start_handler : uploadStart,
+		upload_progress_handler : uploadProgress,
+		upload_error_handler : uploadError,
+		upload_success_handler : uploadSuccess,
+		upload_complete_handler : uploadComplete,
+		queue_complete_handler : queueComplete	// Queue plugin event
+	};
+	swfu = new SWFUpload(settings);
+ };
+ var del = function (node) {   
+        node.dblclick(function(){
+        	ele=$(this);
+        	ele.next().remove();
+        	ele.remove();
+        })      
+    }   
+del($("#image_show_box").children());
+main.setSidebarHover("index");
+var ue = UE.getEditor('descrArea');
+</script>
+`
+<div class="navbar-inner">
+</div>
+<div class="container">
+	<!-- 左菜单 -->
+	`t leftMenusTag()
+	<!-- 主内容 -->
+	<div class="content">
+	<form action="@{AdminController.publishAnnouncements()}" method="post">
+	<div  id="J_pbox_form_box">
+	<h3 class="title" date="">发布闪购商品</h3>
+            <div class="portlet-box-body">
+                <div class="pbox-form-list">
+                    <ul>
+                        <li>
+                           <label>闪购时间：</label>
+                           <div class="pbox-controls">
+                               <input class="Tyz" tyzn="1" name="dateStart_day" type="text" id="dateStart">
+                               <select name="dateStart_hour" class="Tyz" tyzn="1">
+                               		`for(int i=0;i<24;i++){
+                               			`String value=formatNumber(i,"00");
+                       					<option>${value}</option>
+                               		`}
+                               </select>时&nbsp
+                               <span class="text-inline">到</span>
+                               <input class="Tyz" tyzn="1" name="dateEnd_day" type="text" id="dateEnd">
+                               <select name="dateEnd_hour" class="Tyz" tyzn="1">
+                               		`for(int i=0;i<24;i++){
+                               			`String value=formatNumber(i,"00");
+                       					<option}>${value}</option>
+                               		`}
+                               </select>时 &nbsp
+                           </div>
+                        </li>
+                        <li>
+                           <label>商品名称：</label>
+                           <div class="pbox-controls">
+                               <input name="goodName" type="text" class="defaultInput goodName Tyz" tyzn="1">
+                           </div>
+                        </li>
+                        <li>
+                           <label>商品编号：</label>
+                           <div class="pbox-controls">
+                               <input name="goodNumber" type="text" class="defaultInput goodNumber Tyz" tyzn="1">
+                           </div>
+                        </li>
+                        <li>
+                           <label>商品分类：</label>
+                           <div class="pbox-controls">
+                               <input name="goodType" type="text" class="defaultInput goodType Tyz" tyzn="1" >
+                           </div>
+                        </li>
+                        <li class="clr">
+                           <label>原价：</label>
+                           <input name="goodPrice" type="number" class="defaultInput sm2 pbox-c-input price Tyz" tyzn="1" >
+                           <label class="m-l--20px">闪购价：</label>
+                           <input name="realPrice" type="number" class="defaultInput sm2 pbox-c-input hotPrice Tyz" tyzn="1">
+                        </li>
+                        <li class="clr">
+                           <label>每人限购：</label>
+                           <input name="limitNumber" type="number" class="defaultInput sm2 pbox-c-input price Tyz" tyzn="1" >
+                        </li>
+                        <li>
+                            <label>数量：</label>
+                            <div class="pbox-controls">
+                                <input name="goodNum" type="number" class="defaultInput sm2 goodNum Tyz" tyzn="1" >
+                            </div>
+                        </li>
+                        <li>
+                            <label>详情介绍：</label>
+                            <div class="pbox-controls">
+                                <textarea id="descrArea" name="goodContent" style="height:200px;" class="Tyz" tyzn="1"></textarea>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="pbox-controls">
+                        <input type="submit" value="确定" class="defaultBtn submit flashpurchase TyzAutoYz" tyzroomid="J_pbox_form_box"/>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </form>
+        </div>
+        <!-- h20 -->
+        <div class="h20"></div>
+</div>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="telephone=no" name="format-detection" />
+	<title>查询线路</title>
+	<link href="../css/main.css" rel="stylesheet">
+</head>
+<body>
+<section>
+	<header class="lq-head">一号线（一期）线路</header>
+	<div class="line-query-box">
+		<i class="i-line"></i>
+		<ul class="line-select-box">
+			<li>
+				<div class="select1 J_select_site"></div>	
+			</li>
+			<li>
+				<div class="select2 J_select_site"></div>	
+			</li>
+		</ul>
+		<a href="#"><i class="i-arrow"></i></a>   
+	</div>
+	<a class="querybtn" href="#">查询</a>
+    <div class="lq-metro">
+    	<img src="../img/metro-line.png"/>
+    </div>
+</section>
+<div id="line_site">
+    <ul class="line-query-list">
+        <li>高桥西1</li>
+        <li>高桥西2</li>
+        <li>高桥西3</li>
+        <li>高桥西4</li>
+        <li>高桥西5</li>
+        <li>高桥西6</li>
+        <li>高桥西7</li>
+        <li>高桥西8</li>
+        <li>高桥西9</li>
+        <li>高桥西0</li>
+    </ul>
+</div>
+
+<script src="../js/main.js"></script>
+<script>
+    var select_input = $queryAll(".J_select_site"),
+        line_site = $query("#line_site");
+    for(var i in select_input){
+        (function(i){
+            select_input[i].onclick = function(){
+                var _this = this,
+                    _width = _this.offsetWidth,
+                    _top = _this.offsetTop,
+                    _left = _this.offsetLeft;
+
+                    console.log(_width);
+                line_site.style.width = _width + "px";
+                line_site.style.top = _top + 80 + "px";
+                line_site.style.left = _left + "px";
+                line_site.style.display = "block";
+
+                var lis = $queryAll("li",line_site);
+                for(var i in lis){
+                    lis[i].onclick = function(){
+                        _this.innerHTML = this.innerHTML;
+                        line_site.style.display = "none";
+                    };
+                }
+                return false;
+            };
+        })(i)
+    }
+</script>
+</body>
+</html>

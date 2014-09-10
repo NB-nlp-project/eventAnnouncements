@@ -2,6 +2,7 @@ package controllers;
 
 import play.*;
 import play.mvc.*;
+import play.mvc.Scope.Session;
 import japidviews._javatags.CommonUtils;
 
 import java.util.*;
@@ -27,5 +28,11 @@ public class Application extends BaseController {
 		} else {
 			renderText("error login name or password");
 		}
+	}
+
+	public static void logout() {
+		Session.current().remove(CURRENT_PERSON_ID);
+		Session.current().remove(CURRENT_OPENID);
+		loginPage();
 	}
 }

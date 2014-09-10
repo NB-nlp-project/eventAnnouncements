@@ -103,7 +103,7 @@ if(null != currPerson){// line 3, headTag.html
 "    	</div>\n" + 
 "    	<h1 class=\"mt5 wh l\"><a href=\"");// line 8, headTag.html
 		p(lookup("AdminController.flashPurchase", new Object[]{}));// line 10, headTag.html
-		p("\" class=\"wh tdn\">地铁购后台管理系统</a></h1>\n" + 
+		p("\" class=\"wh tdn\">宁波大学活动发布管理系统</a></h1>\n" + 
 "    </div>\n" + 
 "</header>\n");// line 10, headTag.html
 		}// line 13, headTag.html

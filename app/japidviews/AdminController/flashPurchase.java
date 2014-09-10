@@ -111,28 +111,8 @@ public class flashPurchase extends backStageLayout
 "                           <label>闪购时间：</label>\n" + 
 "                           <div class=\"pbox-controls\">\n" + 
 "                               <input class=\"Tyz\" tyzn=\"1\" name=\"dateStart_day\" type=\"text\" id=\"dateStart\">\n" + 
-"                               <select name=\"dateStart_hour\" class=\"Tyz\" tyzn=\"1\">\n" + 
-"                               		");// line 77, flashPurchase.html
-		for(int i=0;i<24;i++){// line 88, flashPurchase.html
-                               			String value=formatNumber(i,"00");// line 89, flashPurchase.html
-		p("                       					<option>");// line 89, flashPurchase.html
-		p(value);// line 90, flashPurchase.html
-		p("</option>\n" + 
-"                               		");// line 90, flashPurchase.html
-		}// line 91, flashPurchase.html
-		p("                               </select>时&nbsp\n" + 
 "                               <span class=\"text-inline\">到</span>\n" + 
 "                               <input class=\"Tyz\" tyzn=\"1\" name=\"dateEnd_day\" type=\"text\" id=\"dateEnd\">\n" + 
-"                               <select name=\"dateEnd_hour\" class=\"Tyz\" tyzn=\"1\">\n" + 
-"                               		");// line 91, flashPurchase.html
-		for(int i=0;i<24;i++){// line 96, flashPurchase.html
-                               			String value=formatNumber(i,"00");// line 97, flashPurchase.html
-		p("                       					<option}>");// line 97, flashPurchase.html
-		p(value);// line 98, flashPurchase.html
-		p("</option>\n" + 
-"                               		");// line 98, flashPurchase.html
-		}// line 99, flashPurchase.html
-		p("                               </select>时 &nbsp\n" + 
 "                           </div>\n" + 
 "                        </li>\n" + 
 "                        <li>\n" + 
@@ -186,7 +166,7 @@ public class flashPurchase extends backStageLayout
 "        </div>\n" + 
 "        <!-- h20 -->\n" + 
 "        <div class=\"h20\"></div>\n" + 
-"</div>\n");// line 99, flashPurchase.html
+"</div>\n");// line 77, flashPurchase.html
 		
 		endDoLayout(sourceTemplate);
 	}
@@ -272,7 +252,7 @@ public class flashPurchase extends backStageLayout
 	}
 	@Override protected void title() {
 		// line 4, flashPurchase.html
-		p("后台管理-发布闪购商品");// line 4, flashPurchase.html
+		p("后台管理");// line 4, flashPurchase.html
 		;
 	}
 }

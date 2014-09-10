@@ -1,7 +1,7 @@
 `import japidviews.AdminController.leftMenusTag;
 `args Announcements announcements
 `extends backStageLayout
-`set title`后台管理-发布闪购商品`
+`set title`后台管理`
 `set moreJSLink
 <script type="text/javascript" src="@{'/public/frontEnd/js/swfupload/swfupload/swfupload.js'}"></script>
 <script type="text/javascript" src="@{'/public/frontEnd/js/swfupload/js/swfupload.queue.js'}"></script>
@@ -84,20 +84,8 @@ var ue = UE.getEditor('descrArea');
                            <label>闪购时间：</label>
                            <div class="pbox-controls">
                                <input class="Tyz" tyzn="1" name="dateStart_day" type="text" id="dateStart">
-                               <select name="dateStart_hour" class="Tyz" tyzn="1">
-                               		`for(int i=0;i<24;i++){
-                               			`String value=formatNumber(i,"00");
-                       					<option>${value}</option>
-                               		`}
-                               </select>时&nbsp
                                <span class="text-inline">到</span>
                                <input class="Tyz" tyzn="1" name="dateEnd_day" type="text" id="dateEnd">
-                               <select name="dateEnd_hour" class="Tyz" tyzn="1">
-                               		`for(int i=0;i<24;i++){
-                               			`String value=formatNumber(i,"00");
-                       					<option}>${value}</option>
-                               		`}
-                               </select>时 &nbsp
                            </div>
                         </li>
                         <li>

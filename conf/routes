@@ -1,15 +1,35 @@
 # Routes
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
-
-# Home page
-GET     /                                       Application.index
-
 # Ignore favicon requests
 GET     /favicon.ico                            404
 
 # Map static resources from the /app/public folder to the /public path
 GET     /public/                                staticDir:public
+
+# 基础URL
+GET     /                                       Application.loginPage
+GET     /mock                                   Application.mockLoginPage
+GET		/logout									Application.logout
+GET     /preview                                Application.index
+GET     /api/	                                Application.api
+GET     /test	                                Application.test
+# 微信profile页相关配置
+GET		/config									ConfigController.menusXML
+# 管理员后台
+GET		/admin/self								AdminController.personCenter
+GET		/admin/shop								AdminController.manageShop
+#GET		/admin/publish/good						AdminController.publishGood
+GET		/admin/good								AdminController.manageGood
+GET		/admin/order							AdminController.manageOrderSum
+GET		/admin/bill								AdminController.manageBill
+GET		/admin/vip								AdminController.manageVIP
+# 微信接口相关routes（若修改，请保持Play与微信mp平台的同步配置）
+*       /checksignature                         APIController.checkSignature
+POST	/wcpay/payfeedback						APIController.payFeedBack
+GET		/wcpay/alarm							APIController.alarm
+GET		/wcpay/addr								APIController.wcAddress
+GET		/wcpay/{sumId}							APIController.confirmPayByWC
 
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}

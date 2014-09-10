@@ -3,11 +3,14 @@ package models;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 
 @Entity
 public class Announcements extends BaseModel {
 	public String title;
+
+	@Column(length = 4000000)
 	public String contents;
 	public Date startTime;
 	public Date endTime;

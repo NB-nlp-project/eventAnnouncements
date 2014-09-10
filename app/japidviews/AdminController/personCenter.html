@@ -1,0 +1,72 @@
+`import models.Person;
+
+`Person currPerson = getCurrentPerson();
+`extends backStageLayout
+`set title`后台管理-账号管理`
+`set moreJSLink
+`verbatim
+<script>
+main.setSidebarHover("index");
+</script>
+`
+`
+<div class="navbar-inner">
+</div>
+<div class="container">
+	<!-- 左菜单 -->
+	`t leftMenusTag()
+	<!-- 主内容 -->
+	<div class="content">
+        <div class="constr fix">
+		<section class="cell">
+			<nav class="nav_content_box fix">
+				<h4 class="l">您的基本信息</h4>
+	        </nav>
+            <article class="mt20 ml20 pl10">
+            	<div class="pb20">
+                    <div class="ml20 pl10 pt10">
+                    	<p class="ml10 pl5 pb10">
+                        	登录名：
+                            <span class="inline_five">${currPerson.loginName}</span>
+                        </p>
+                        <p>
+                        	上次登录：
+                             <span class="inline_five">${formatDate(null == currPerson.lastLoginTime ? currPerson.createTime : currPerson.lastLoginTime, "yyyy年MM月dd日 HH:mm:ss")}</span>
+                        </p>
+                    </div>
+                </div>
+            </article> 
+			<article class="pl10 mt20 mb20">
+			<form action="@{AdminController.savePassword()}" method="post">
+				<ul>
+					<li class="mb15">
+                    	<span class="dib w70 tr">
+                        	<span class="cr">*</span>
+							当前密码：
+                        </span>
+						<input class="text_input" type="password" name="oldPwd"/>
+					</li>
+                    <li class="mb15">
+                    	<span class="dib w70 tr">
+                        	<span class="cr">*</span>
+							新密码：
+                        </span>
+						<input class="text_input" type="password" name="newPwd"/>
+					</li>
+					<li class="mb15">
+                    	<span class="dib w70 tr">
+                        	<span class="cr">*</span>
+							再输一遍：
+                        </span>
+						<input class="text_input" type="password" name="newPwdA"/>
+					</li>
+				</ul>
+				<div class="pt10 ml20">
+					<p class="pt10 ml20">${flash.get("tips")}</p>
+					<input class="bluebtn btn_m bdrad3" type="submit" value="修改密码"/>
+				</div>
+			</form>
+			</article>
+		</section>
+	</div>
+</div>

@@ -141,6 +141,7 @@ public class flashPurchase extends backStageLayout
 "                    </ul>\n" + 
 "                    <div class=\"pbox-controls\">\n" + 
 "                        <input type=\"submit\" value=\"确定\" class=\"defaultBtn submit flashpurchase TyzAutoYz\" tyzroomid=\"J_pbox_form_box\"/>\n" + 
+"                        <input type=\"submit\" value=\"预览\" class=\"defaultBtn submit flashpurchase TyzAutoYz btn-green\"/>\n" + 
 "                    </div>\n" + 
 "                </div>\n" + 
 "            </div>\n" + 

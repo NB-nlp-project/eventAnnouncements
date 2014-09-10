@@ -97,6 +97,7 @@ public class AdminController extends BaseController {
 	// 发布活动
 	public static void publishAnnouncements(long announcementsId, String title,
 			Date startTime, Date endTime, String contents) {
+		System.err.println(contents);
 		Announcements announcements = Announcements
 				.findOneById(announcementsId);
 		announcements.announcementsUpdateAttributes(announcementsId, title,

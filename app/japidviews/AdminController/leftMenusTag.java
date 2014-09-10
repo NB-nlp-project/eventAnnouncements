@@ -9,6 +9,7 @@ import static play.templates.JavaExtensions.*;
 import play.data.validation.Error;
 import play.i18n.Messages;
 import play.mvc.Scope.*;
+import japidviews._tags.*;
 import play.data.validation.Validation;
 import play.i18n.Lang;
 import controllers.*;
@@ -96,18 +97,18 @@ p("<div class=\"sidebar\">\n" +
 "		</ul>\n" + 
 "	</div>\n" + 
 "	<div class=\"item open\">\n" + 
-"		<a href=\"#\" class=\"title\">今日闪购管理</a>\n" + 
+"		<a href=\"#\" class=\"title\">活动管理</a>\n" + 
 "		<ul>\n" + 
 "            <li><a href=\"");// line 5, leftMenusTag.html
 		p(lookup("AdminController.flashPurchase", new Object[]{}));// line 11, leftMenusTag.html
 		p("\" ");// line 11, leftMenusTag.html
 		p("flashPurchase".equals(request.actionMethod)?" name='index'":"");// line 11, leftMenusTag.html
-		p(">发布闪购商品</a></li>\n" + 
+		p(">活动发布</a></li>\n" + 
 "            <li><a href=\"");// line 11, leftMenusTag.html
 		p(lookup("AdminController.flashPurchaseList", new Object[]{}));// line 12, leftMenusTag.html
 		p("\" ");// line 12, leftMenusTag.html
 		p("flashPurchaseList".equals(request.actionMethod)?" name='index'":"");// line 12, leftMenusTag.html
-		p(">商品列表</a></li>\n" + 
+		p(">发布活动列表</a></li>\n" + 
 "		</ul>\n" + 
 "	</div>\n" + 
 "</div>");// line 12, leftMenusTag.html

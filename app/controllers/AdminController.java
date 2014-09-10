@@ -99,6 +99,15 @@ public class AdminController extends BaseController {
 			Date startTime, Date endTime, String contents) {
 		Announcements announcements = Announcements
 				.findOneById(announcementsId);
+		announcements.announcementsUpdateAttributes(announcementsId, title,
+				startTime, endTime, contents);
+		flashPurchaseList(1);
+	}
+
+	// 删除活动
+	public static void deleteFastGood(long goodId) {
+		Announcements announcements = Announcements.findOneById(goodId);
+		announcements.removeOne();
 		flashPurchaseList(1);
 	}
 

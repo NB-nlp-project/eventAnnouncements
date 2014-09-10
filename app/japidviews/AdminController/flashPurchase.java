@@ -95,64 +95,47 @@ public class flashPurchase extends backStageLayout
 "</div>\n" + 
 "<div class=\"container\">\n" + 
 "	<!-- 左菜单 -->\n" + 
-"	");// line 69, flashPurchase.html
-		new leftMenusTag(flashPurchase.this).render(); // line 74, flashPurchase.html// line 74, flashPurchase.html
+"	");// line 15, flashPurchase.html
+		new leftMenusTag(flashPurchase.this).render(); // line 20, flashPurchase.html// line 20, flashPurchase.html
 		p("	<!-- 主内容 -->\n" + 
 "	<div class=\"content\">\n" + 
-"	<form action=\"");// line 74, flashPurchase.html
-		p(lookup("AdminController.publishAnnouncements", new Object[]{}));// line 77, flashPurchase.html
+"	<form action=\"");// line 20, flashPurchase.html
+		p(lookup("AdminController.publishAnnouncements", new Object[]{}));// line 23, flashPurchase.html
 		p("\" method=\"post\">\n" + 
+"	<input type=\"hidden\" name=\"announcementsId\" value=\"");// line 23, flashPurchase.html
+		p(announcements==null?"":announcements.id);// line 24, flashPurchase.html
+		p("\">\n" + 
 "	<div  id=\"J_pbox_form_box\">\n" + 
-"	<h3 class=\"title\" date=\"\">发布闪购商品</h3>\n" + 
+"	<h3 class=\"title\" date=\"\">活动发布</h3>\n" + 
 "            <div class=\"portlet-box-body\">\n" + 
 "                <div class=\"pbox-form-list\">\n" + 
 "                    <ul>\n" + 
-"                        <li>\n" + 
-"                           <label>闪购时间：</label>\n" + 
+"                    	<li>\n" + 
+"                           <label>活动标题：</label>\n" + 
 "                           <div class=\"pbox-controls\">\n" + 
-"                               <input class=\"Tyz\" tyzn=\"1\" name=\"dateStart_day\" type=\"text\" id=\"dateStart\">\n" + 
+"                               <input name=\"title\" type=\"text\" class=\"defaultInput goodName Tyz\" tyzn=\"1\" value=\"");// line 24, flashPurchase.html
+		p(announcements==null?"":announcements.title);// line 33, flashPurchase.html
+		p("\">\n" + 
+"                           </div>\n" + 
+"                        </li>\n" + 
+"                        <li>\n" + 
+"                           <label>活动时间：</label>\n" + 
+"                           <div class=\"pbox-controls\">\n" + 
+"                               <input class=\"Tyz\" tyzn=\"1\" name=\"startTime\" type=\"text\" id=\"dateStart\" value=\"");// line 33, flashPurchase.html
+		p(announcements==null?"":announcements.startTime);// line 39, flashPurchase.html
+		p("\">\n" + 
 "                               <span class=\"text-inline\">到</span>\n" + 
-"                               <input class=\"Tyz\" tyzn=\"1\" name=\"dateEnd_day\" type=\"text\" id=\"dateEnd\">\n" + 
+"                               <input class=\"Tyz\" tyzn=\"1\" name=\"endTime\" type=\"text\" id=\"dateEnd\" value=\"");// line 39, flashPurchase.html
+		p(announcements==null?"":announcements.endTime);// line 41, flashPurchase.html
+		p("\">\n" + 
 "                           </div>\n" + 
-"                        </li>\n" + 
-"                        <li>\n" + 
-"                           <label>商品名称：</label>\n" + 
-"                           <div class=\"pbox-controls\">\n" + 
-"                               <input name=\"goodName\" type=\"text\" class=\"defaultInput goodName Tyz\" tyzn=\"1\">\n" + 
-"                           </div>\n" + 
-"                        </li>\n" + 
-"                        <li>\n" + 
-"                           <label>商品编号：</label>\n" + 
-"                           <div class=\"pbox-controls\">\n" + 
-"                               <input name=\"goodNumber\" type=\"text\" class=\"defaultInput goodNumber Tyz\" tyzn=\"1\">\n" + 
-"                           </div>\n" + 
-"                        </li>\n" + 
-"                        <li>\n" + 
-"                           <label>商品分类：</label>\n" + 
-"                           <div class=\"pbox-controls\">\n" + 
-"                               <input name=\"goodType\" type=\"text\" class=\"defaultInput goodType Tyz\" tyzn=\"1\" >\n" + 
-"                           </div>\n" + 
-"                        </li>\n" + 
-"                        <li class=\"clr\">\n" + 
-"                           <label>原价：</label>\n" + 
-"                           <input name=\"goodPrice\" type=\"number\" class=\"defaultInput sm2 pbox-c-input price Tyz\" tyzn=\"1\" >\n" + 
-"                           <label class=\"m-l--20px\">闪购价：</label>\n" + 
-"                           <input name=\"realPrice\" type=\"number\" class=\"defaultInput sm2 pbox-c-input hotPrice Tyz\" tyzn=\"1\">\n" + 
-"                        </li>\n" + 
-"                        <li class=\"clr\">\n" + 
-"                           <label>每人限购：</label>\n" + 
-"                           <input name=\"limitNumber\" type=\"number\" class=\"defaultInput sm2 pbox-c-input price Tyz\" tyzn=\"1\" >\n" + 
-"                        </li>\n" + 
-"                        <li>\n" + 
-"                            <label>数量：</label>\n" + 
-"                            <div class=\"pbox-controls\">\n" + 
-"                                <input name=\"goodNum\" type=\"number\" class=\"defaultInput sm2 goodNum Tyz\" tyzn=\"1\" >\n" + 
-"                            </div>\n" + 
 "                        </li>\n" + 
 "                        <li>\n" + 
 "                            <label>详情介绍：</label>\n" + 
 "                            <div class=\"pbox-controls\">\n" + 
-"                                <textarea id=\"descrArea\" name=\"goodContent\" style=\"height:200px;\" class=\"Tyz\" tyzn=\"1\"></textarea>\n" + 
+"                                <textarea id=\"descrArea\" name=\"contents\" style=\"height:200px;\" class=\"Tyz\" tyzn=\"1\" value=\"");// line 41, flashPurchase.html
+		p(announcements==null?"":announcements.contents);// line 47, flashPurchase.html
+		p("\"></textarea>\n" + 
 "                            </div>\n" + 
 "                        </li>\n" + 
 "                    </ul>\n" + 
@@ -166,7 +149,7 @@ public class flashPurchase extends backStageLayout
 "        </div>\n" + 
 "        <!-- h20 -->\n" + 
 "        <div class=\"h20\"></div>\n" + 
-"</div>\n");// line 77, flashPurchase.html
+"</div>\n");// line 47, flashPurchase.html
 		
 		endDoLayout(sourceTemplate);
 	}
@@ -192,60 +175,6 @@ public class flashPurchase extends backStageLayout
 		p(lookupStatic("/public/js/ueditor/ueditor.all.min.js"));// line 11, flashPurchase.html
 		p("\"></script>\n" + 
 "<script type=\"text/javascript\">\n" + 
-"var swfu;\n" + 
-"window.onload = function() {\n" + 
-"	var settings = {\n" + 
-"		flash_url : \"/public/frontEnd/js/swfupload/swfupload/swfupload.swf\",\n" + 
-"		upload_url: \"http://121.40.83.194/pic/form\",\n" + 
-"		post_params: {\n" + 
-"			\"bucketName\" : \"ningboGo\",\n" + 
-"			\"source\" : \"web\"\n" + 
-"		},\n" + 
-"		file_post_name : \"qqfile\",\n" + 
-"		file_size_limit : \"100 MB\",\n" + 
-"		file_types : \"*.*\",\n" + 
-"		file_types_description : \"All Files\",\n" + 
-"		file_upload_limit : 100,\n" + 
-"		file_queue_limit : 0,\n" + 
-"		custom_settings : {\n" + 
-"			progressTarget : \"fsUploadProgress\",\n" + 
-"			cancelButtonId : \"btnCancel\"\n" + 
-"		},\n" + 
-"		debug: false,\n" + 
-"\n" + 
-"		// Button settings\n" + 
-"		button_image_url: \"../public/img/swfupload_bg.png\",	// Relative to the Flash file\n" + 
-"		button_width: \"112\",\n" + 
-"		button_height: \"35\",\n" + 
-"		button_placeholder_id: \"spanButtonPlaceHolder\",\n" + 
-"		button_text: '',\n" + 
-"		button_text_style: \".theFont { font-size: 16; }\",\n" + 
-"		button_text_left_padding: 12,\n" + 
-"		button_text_top_padding: 3,\n" + 
-"		button_action : SWFUpload.BUTTON_ACTION.SELECT_FILE, //一次选择一个文件\n" + 
-"		\n" + 
-"		// The event handler functions are defined in handlers.js\n" + 
-"		file_queued_handler : fileQueued,\n" + 
-"		file_queue_error_handler : fileQueueError,\n" + 
-"		file_dialog_complete_handler : fileDialogComplete,\n" + 
-"		upload_start_handler : uploadStart,\n" + 
-"		upload_progress_handler : uploadProgress,\n" + 
-"		upload_error_handler : uploadError,\n" + 
-"		upload_success_handler : uploadSuccess,\n" + 
-"		upload_complete_handler : uploadComplete,\n" + 
-"		queue_complete_handler : queueComplete	// Queue plugin event\n" + 
-"	};\n" + 
-"	swfu = new SWFUpload(settings);\n" + 
-" };\n" + 
-" var del = function (node) {   \n" + 
-"        node.dblclick(function(){\n" + 
-"        	ele=$(this);\n" + 
-"        	ele.next().remove();\n" + 
-"        	ele.remove();\n" + 
-"        })      \n" + 
-"    }   \n" + 
-"del($(\"#image_show_box\").children());\n" + 
-"main.setSidebarHover(\"index\");\n" + 
 "var ue = UE.getEditor('descrArea');\n" + 
 "</script>\n");// line 11, flashPurchase.html
 		;

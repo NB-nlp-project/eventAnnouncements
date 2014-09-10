@@ -37,6 +37,7 @@
                     <td>${announcements.startTime}</td>
                     <td>${announcements.endTime}</td>
                     <td>
+                    	<a id="preview" href="@{AdminController.preview(announcements.id)}" class="defaultBtn btn-sm btn-green">预览</a>
                         <a id="flashPurchase" href="@{AdminController.flashPurchase(announcements.id)}" class="defaultBtn btn-sm btn-blue">编辑</a>
                         <a id="del" href="@{AdminController.deleteFastGood(announcements.id)}" class="defaultBtn btn-sm btn-red">删除</a>
                     </td>

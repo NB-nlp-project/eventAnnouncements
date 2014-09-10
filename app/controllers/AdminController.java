@@ -105,10 +105,14 @@ public class AdminController extends BaseController {
 	}
 
 	// 删除活动
-	public static void deleteFastGood(long goodId) {
-		Announcements announcements = Announcements.findOneById(goodId);
+	public static void deleteFastGood(long announcementsId) {
+		Announcements announcements = Announcements
+				.findOneById(announcementsId);
 		announcements.removeOne();
 		flashPurchaseList(1);
 	}
 
+	public static void preview(long announcementsId) {
+
+	}
 }

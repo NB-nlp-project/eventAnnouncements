@@ -1,4 +1,5 @@
 `import japidviews.AdminController.leftMenusTag;
+`import japidviews._tags.editorTag;
 `args Announcements announcements
 `extends backStageLayout
 `set title`后台管理`
@@ -44,7 +45,7 @@ var ue = UE.getEditor('descrArea');
                         <li>
                             <label>详情介绍：</label>
                             <div class="pbox-controls">
-                                <textarea id="descrArea" name="contents" style="height:200px;" class="Tyz" tyzn="1" value="${announcements==null?"":announcements.contents}"></textarea>
+                            	`t editorTag(announcements)
                             </div>
                         </li>
                     </ul>

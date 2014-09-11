@@ -131,28 +131,25 @@ public class flashPurchaseList extends backStageLayout
 "                    	<a id=\"preview\" href=\"");// line 38, flashPurchaseList.html
 		p(lookup("AdminController.preview", announcements.id));// line 40, flashPurchaseList.html
 		p("\" class=\"defaultBtn btn-sm btn-green\">预览</a>\n" + 
-"                        <a id=\"flashPurchase\" href=\"");// line 40, flashPurchaseList.html
-		p(lookup("AdminController.flashPurchase", announcements.id));// line 41, flashPurchaseList.html
-		p("\" class=\"defaultBtn btn-sm btn-blue\">编辑</a>\n" + 
-"                        <a id=\"del\" href=\"");// line 41, flashPurchaseList.html
-		p(lookup("AdminController.deleteFastGood", announcements.id));// line 42, flashPurchaseList.html
+"                        <a id=\"del\" href=\"");// line 40, flashPurchaseList.html
+		p(lookup("AdminController.deleteFastGood", announcements.id));// line 41, flashPurchaseList.html
 		p("\" class=\"defaultBtn btn-sm btn-red\">删除</a>\n" + 
 "                    </td>\n" + 
 "                </tr>\n" + 
-"                ");// line 42, flashPurchaseList.html
-		}// line 45, flashPurchaseList.html
-                }// line 46, flashPurchaseList.html
+"                ");// line 41, flashPurchaseList.html
+		}// line 44, flashPurchaseList.html
+                }// line 45, flashPurchaseList.html
 		p("            </table>\n" + 
-"            ");// line 46, flashPurchaseList.html
-		new pagination(flashPurchaseList.this).render(getUrl(),"page",currentPage,totalPage,null); // line 48, flashPurchaseList.html// line 48, flashPurchaseList.html
-            // line 49, flashPurchaseList.html
+"            ");// line 45, flashPurchaseList.html
+		new pagination(flashPurchaseList.this).render(getUrl(),"page",currentPage,totalPage,null); // line 47, flashPurchaseList.html// line 47, flashPurchaseList.html
+            // line 48, flashPurchaseList.html
 		p("            <!-- h20 -->\n" + 
 "            <div class=\"h20\"></div>\n" + 
 "		</div>\n" + 
 "\n" + 
 "    </div>\n" + 
 "</body>\n" + 
-"</html>");// line 51, flashPurchaseList.html
+"</html>");// line 50, flashPurchaseList.html
 		
 		endDoLayout(sourceTemplate);
 	}
@@ -175,10 +172,10 @@ StringBuilder ori = getOut();
 this.setOut(sb);
 TreeMap<Integer, cn.bran.japid.template.ActionRunner> parentActionRunners = actionRunners;
 actionRunners = new TreeMap<Integer, cn.bran.japid.template.ActionRunner>();
-// line 49, flashPurchaseList.html
-		p("            	");// line 49, flashPurchaseList.html
-		p(lookup("AdminController.flashPurchaseList", new Object[]{}));// line 50, flashPurchaseList.html
-		p("            ");// line 50, flashPurchaseList.html
+// line 48, flashPurchaseList.html
+		p("            	");// line 48, flashPurchaseList.html
+		p(lookup("AdminController.flashPurchaseList", new Object[]{}));// line 49, flashPurchaseList.html
+		p("            ");// line 49, flashPurchaseList.html
 		
 this.setOut(ori);
 if (actionRunners.size() > 0) {

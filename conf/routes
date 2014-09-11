@@ -30,6 +30,5 @@ POST	/wcpay/payfeedback						APIController.payFeedBack
 GET		/wcpay/alarm							APIController.alarm
 GET		/wcpay/addr								APIController.wcAddress
 GET		/wcpay/{sumId}							APIController.confirmPayByWC
-
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}

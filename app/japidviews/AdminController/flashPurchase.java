@@ -141,7 +141,7 @@ public class flashPurchase extends backStageLayout
 "                    </ul>\n" + 
 "                    <div class=\"pbox-controls\">\n" + 
 "                        <input type=\"submit\" value=\"确定\" class=\"defaultBtn submit flashpurchase TyzAutoYz\" tyzroomid=\"J_pbox_form_box\"/>\n" + 
-"                        <input type=\"submit\" value=\"预览\" class=\"defaultBtn submit flashpurchase TyzAutoYz btn-green\"/>\n" + 
+"                        <a type=\"submit\" class=\"defaultBtn submit flashpurchase TyzAutoYz btn-green\"/>预览</a>\n" + 
 "                    </div>\n" + 
 "                </div>\n" + 
 "            </div>\n" + 
@@ -173,7 +173,7 @@ public class flashPurchase extends backStageLayout
 		p(lookupStatic("/public/js/ueditor/ueditor.config.js"));// line 11, flashPurchase.html
 		p("\"></script>\n" + 
 "<script type=\"text/javascript\" src=\"");// line 11, flashPurchase.html
-		p(lookupStatic("/public/js/ueditor/ueditor.all.min.js"));// line 12, flashPurchase.html
+		p(lookupStatic("/public/js/ueditor/ueditor.all.js"));// line 12, flashPurchase.html
 		p("\"></script>\n" + 
 "<script type=\"text/javascript\">\n" + 
 "var ue = UE.getEditor('descrArea');\n" + 

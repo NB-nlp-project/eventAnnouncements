@@ -1781,11 +1781,12 @@
              * @description
              * 添加文件选择按钮，如果一个按钮不够，需要调用此方法来添加。参数跟[options.pick](#WebUploader:Uploader:options)一致。
              * @example
-             * uploader.addButton({
-             *     id: '#btnContainer',
-             *     innerHTML: '选择文件'
-             * });
-             */
+             * */
+              uploader.addButton({
+                  id: '#btnContainer',
+                  innerHTML: '选择文件'
+             });
+             
             addButton: function( pick ) {
                 var me = this,
                     opts = me.options,

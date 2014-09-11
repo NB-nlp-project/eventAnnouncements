@@ -9,10 +9,12 @@ import static play.templates.JavaExtensions.*;
 import play.data.validation.Error;
 import play.i18n.Messages;
 import play.mvc.Scope.*;
+import japidviews._tags.*;
 import play.data.validation.Validation;
 import play.i18n.Lang;
 import controllers.*;
 import static japidviews._javatags.CommonUtils.*;
+import japidviews._layouts.*;
 import models.*;
 import play.mvc.Http.*;
 //

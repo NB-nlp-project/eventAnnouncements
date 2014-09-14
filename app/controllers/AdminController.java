@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import models.LostAndFound;
 import models.Person;
 import models.Announcements;
 
@@ -52,24 +53,6 @@ public class AdminController extends BaseController {
 
 	public static void flashPurchase(long goodId) {
 		renderJapid(Announcements.findOneById(goodId));
-	}
-
-	public static void goodSavePreview(String name, String chief, String descr,
-			String imageURL, int showPrice, int realPrice, int leftCount,
-			List<String> picUrls) {
-		renderJapid(name, chief, descr, imageURL, showPrice, realPrice,
-				leftCount, picUrls);
-	}
-
-	public static void jsonGoodPreview(long goodId) {
-		renderJapid(goodId);
-	}
-
-	public static void jsonGoodSavePreview(String name, String chief,
-			String descr, String imageURL, int showPrice, int realPrice,
-			int leftCount, @As(",") List<String> picUrls) {
-		renderJapid(name, chief, descr, imageURL, showPrice, realPrice,
-				leftCount, picUrls);
 	}
 
 	public static void savePassword(String oldPwd, String newPwd, String newPwdA) {
@@ -114,5 +97,27 @@ public class AdminController extends BaseController {
 
 	public static void preview(long announcementsId) {
 
+	}
+
+	public static void lostAndFound(long goodId) {
+		renderJapid(LostAndFound.findOneById(goodId));
+	}
+
+	public static void lostAndFoundList(Integer page) {
+		if (page == null) {
+			page = 1;
+		}
+		List<LostAndFound> fastGoodList = LostAndFound.fetchAllLostAndFounds(
+				page, 20);
+		renderJapid(fastGoodList, page,
+				(int) LostAndFound.countLostAndFounds() / 20 + 1);
+	}
+
+	public static void publishLostAndFound(long announcementsId, String title,
+			Date startTime, String contents) {
+		LostAndFound announcements = LostAndFound.findOneById(announcementsId);
+		announcements.lostAndFoundUpdateAttributes(announcementsId, title,
+				startTime, contents);
+		flashPurchaseList(1);
 	}
 }

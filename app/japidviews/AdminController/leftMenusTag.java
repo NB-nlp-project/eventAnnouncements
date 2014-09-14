@@ -111,7 +111,22 @@ p("<div class=\"sidebar\">\n" +
 		p(">发布活动列表</a></li>\n" + 
 "		</ul>\n" + 
 "	</div>\n" + 
-"</div>");// line 12, leftMenusTag.html
+"	<div class=\"item open\">\n" + 
+"		<a href=\"#\" class=\"title\">失物招领</a>\n" + 
+"		<ul>\n" + 
+"            <li><a href=\"");// line 12, leftMenusTag.html
+		p(lookup("AdminController.lostAndFound", new Object[]{}));// line 18, leftMenusTag.html
+		p("\" ");// line 18, leftMenusTag.html
+		p("lostAndFound".equals(request.actionMethod)?" name='index'":"");// line 18, leftMenusTag.html
+		p(">失物招领-发布</a></li>\n" + 
+"            <li><a href=\"");// line 18, leftMenusTag.html
+		p(lookup("AdminController.lostAndFoundList", new Object[]{}));// line 19, leftMenusTag.html
+		p("\" ");// line 19, leftMenusTag.html
+		p("lostAndFoundList".equals(request.actionMethod)?" name='index'":"");// line 19, leftMenusTag.html
+		p(">失物招领-列表</a></li>\n" + 
+"		</ul>\n" + 
+"	</div>\n" + 
+"</div>");// line 19, leftMenusTag.html
 		
 		endDoLayout(sourceTemplate);
 	}

@@ -12,4 +12,11 @@
             <li><a href="@{AdminController.flashPurchaseList()}" ${"flashPurchaseList".equals(request.actionMethod)?" name='index'":""}>发布活动列表</a></li>
 		</ul>
 	</div>
+	<div class="item open">
+		<a href="#" class="title">失物招领</a>
+		<ul>
+            <li><a href="@{AdminController.lostAndFound()}" ${"lostAndFound".equals(request.actionMethod)?" name='index'":""}>失物招领-发布</a></li>
+            <li><a href="@{AdminController.lostAndFoundList()}" ${"lostAndFoundList".equals(request.actionMethod)?" name='index'":""}>失物招领-列表</a></li>
+		</ul>
+	</div>
 </div>

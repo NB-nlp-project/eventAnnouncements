@@ -8,22 +8,16 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
 
-import groovy.json.JsonBuilder;
-
-import com.baidu.ueditor.ActionEnter;
-import com.baidu.ueditor.define.AppInfo;
-import com.baidu.ueditor.define.BaseState;
-import com.google.gson.JsonObject;
+import com.sun.xml.internal.ws.client.RequestContext;
 
 public class UeditorController extends BaseController {
 
 	public static void controller(String action, String noCache)
 			throws IOException {
 		InputStreamReader read;
-		switch (action.split(",")[1].replaceAll(" ", "")) {
+		String filter = action.split(",")[1].replaceAll(" ", "");
+		switch (filter) {
 		case "config":
 			read= new InputStreamReader(new FileInputStream(
 					"public/js/ueditor/jsp/config.json"), "utf-8");
@@ -39,9 +33,17 @@ public class UeditorController extends BaseController {
 		case "uploadimage":
 			System.err.println(request.params);
 			System.err.println(request.params.get("upfile"));
+
 			break;
+		/* 上传涂鸦 */
+		case "uploadscrawl":
+			/* 上传视频 */
+		case "uploadvideo":
+			/* 上传文件 */
+		case "uploadfile":
 		default:
 			break;
 		}
 	}
+
 }

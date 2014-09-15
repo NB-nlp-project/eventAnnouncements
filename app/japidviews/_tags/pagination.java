@@ -96,47 +96,47 @@ public class pagination extends cn.bran.play.JapidTemplateBase
 
 	@Override protected void doLayout() {
 		beginDoLayout(sourceTemplate);
-;// line 1, pagination.html
-		;// line 1, pagination.html
-		p("<div class=\"paging");// line 2, pagination.html
-		p(StringUtils.isNotBlank(additionalClass)?(" "+additionalClass):"");// line 3, pagination.html
+;// line 1, japidviews\_tags\pagination.html
+		;// line 1, japidviews\_tags\pagination.html
+		p("<div class=\"paging");// line 2, japidviews\_tags\pagination.html
+		p(StringUtils.isNotBlank(additionalClass)?(" "+additionalClass):"");// line 3, japidviews\_tags\pagination.html
 		p("\">\n" + 
-"    <a class=\"");// line 3, pagination.html
-		p(currentPage==1?"page_end":"page_off");// line 4, pagination.html
-		p("\" href=\"");// line 4, pagination.html
-		p(currentPage==1?"#":getUrl(1));// line 4, pagination.html
+"    <a class=\"");// line 3, japidviews\_tags\pagination.html
+		p(currentPage==1?"page_end":"page_off");// line 4, japidviews\_tags\pagination.html
+		p("\" href=\"");// line 4, japidviews\_tags\pagination.html
+		p(currentPage==1?"#":getUrl(1));// line 4, japidviews\_tags\pagination.html
 		p("\">首页</a>\n" + 
-"    <a class=\"");// line 4, pagination.html
-		p(currentPage==1?"page_end":"page_off");// line 5, pagination.html
-		p("\" href=\"");// line 5, pagination.html
-		p(currentPage==1?"#":getUrl(currentPage>1?(currentPage-1):1));// line 5, pagination.html
+"    <a class=\"");// line 4, japidviews\_tags\pagination.html
+		p(currentPage==1?"page_end":"page_off");// line 5, japidviews\_tags\pagination.html
+		p("\" href=\"");// line 5, japidviews\_tags\pagination.html
+		p(currentPage==1?"#":getUrl(currentPage>1?(currentPage-1):1));// line 5, japidviews\_tags\pagination.html
 		p("\">< 上一页</a>\n" + 
-"    ");// line 5, pagination.html
-		int startPage=currentPage/6*6+1;// line 6, pagination.html
-    for(int i=0;i<(totalPage>6?6:totalPage);i++){// line 7, pagination.html
-    	int page=startPage+i;// line 8, pagination.html
-		p("    	<a class=\"");// line 8, pagination.html
-		p(currentPage==page?"page_on":"page_off");// line 9, pagination.html
-		p("\" href=\"");// line 9, pagination.html
-		p(getUrl(page));// line 9, pagination.html
-		p("\">");// line 9, pagination.html
-		p(page);// line 9, pagination.html
+"    ");// line 5, japidviews\_tags\pagination.html
+		int startPage=currentPage/6*6+1;// line 6, japidviews\_tags\pagination.html
+    for(int i=0;i<(totalPage>6?6:totalPage);i++){// line 7, japidviews\_tags\pagination.html
+    	int page=startPage+i;// line 8, japidviews\_tags\pagination.html
+		p("    	<a class=\"");// line 8, japidviews\_tags\pagination.html
+		p(currentPage==page?"page_on":"page_off");// line 9, japidviews\_tags\pagination.html
+		p("\" href=\"");// line 9, japidviews\_tags\pagination.html
+		p(getUrl(page));// line 9, japidviews\_tags\pagination.html
+		p("\">");// line 9, japidviews\_tags\pagination.html
+		p(page);// line 9, japidviews\_tags\pagination.html
 		p("</a>\n" + 
-"    ");// line 9, pagination.html
-		}// line 10, pagination.html
-		p("    <a class=\"");// line 10, pagination.html
-		p(currentPage==totalPage?"page_end":"page_off");// line 11, pagination.html
-		p("\" href=\"");// line 11, pagination.html
-		p(currentPage==1?"#":getUrl(currentPage<totalPage?(currentPage+1):totalPage));// line 11, pagination.html
+"    ");// line 9, japidviews\_tags\pagination.html
+		}// line 10, japidviews\_tags\pagination.html
+		p("    <a class=\"");// line 10, japidviews\_tags\pagination.html
+		p(currentPage==totalPage?"page_end":"page_off");// line 11, japidviews\_tags\pagination.html
+		p("\" href=\"");// line 11, japidviews\_tags\pagination.html
+		p(currentPage==1?"#":getUrl(currentPage<totalPage?(currentPage+1):totalPage));// line 11, japidviews\_tags\pagination.html
 		p("\">下一页 ></a>\n" + 
-"    <a class=\"");// line 11, pagination.html
-		p(currentPage==totalPage?"page_end":"page_off");// line 12, pagination.html
-		p("\" href=\"");// line 12, pagination.html
-		p(currentPage==1?"#":getUrl(totalPage));// line 12, pagination.html
+"    <a class=\"");// line 11, japidviews\_tags\pagination.html
+		p(currentPage==totalPage?"page_end":"page_off");// line 12, japidviews\_tags\pagination.html
+		p("\" href=\"");// line 12, japidviews\_tags\pagination.html
+		p(currentPage==1?"#":getUrl(totalPage));// line 12, japidviews\_tags\pagination.html
 		p("\">尾页</a>\n" + 
-"</div>\n");// line 12, pagination.html
-		// line 14, pagination.html
-		;// line 16, pagination.html
+"</div>\n");// line 12, japidviews\_tags\pagination.html
+		// line 14, japidviews\_tags\pagination.html
+		;// line 16, japidviews\_tags\pagination.html
 		
 		endDoLayout(sourceTemplate);
 	}
@@ -147,10 +147,10 @@ StringBuilder ori = getOut();
 this.setOut(sb);
 TreeMap<Integer, cn.bran.japid.template.ActionRunner> parentActionRunners = actionRunners;
 actionRunners = new TreeMap<Integer, cn.bran.japid.template.ActionRunner>();
-// line 14, pagination.html
-		p("");// line 14, pagination.html
-		p(url.trim()+(url.contains("?")?"&":"?")+argName+"="+page);// line 15, pagination.html
-		p("");// line 15, pagination.html
+// line 14, japidviews\_tags\pagination.html
+		p("");// line 14, japidviews\_tags\pagination.html
+		p(url.trim()+(url.contains("?")?"&":"?")+argName+"="+page);// line 15, japidviews\_tags\pagination.html
+		p("");// line 15, japidviews\_tags\pagination.html
 		
 this.setOut(ori);
 if (actionRunners.size() > 0) {

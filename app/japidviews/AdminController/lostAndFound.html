@@ -1,0 +1,60 @@
+`import japidviews.AdminController.leftMenusTag;
+`import japidviews._tags.editorTag;
+`args LostAndFound lostAndFound
+`extends backStageLayout
+`set title`后台管理`
+`set moreJSLink
+<script type="text/javascript" src="@{'/public/frontEnd/js/swfupload/swfupload/swfupload.js'}"></script>
+<script type="text/javascript" src="@{'/public/frontEnd/js/swfupload/js/swfupload.queue.js'}"></script>
+<script type="text/javascript" src="@{'/public/frontEnd/js/swfupload/js/fileprogress.js'}"></script>
+<script type="text/javascript" src="@{'/public/frontEnd/js/swfupload/js/handlers.js'}"></script>
+<script type="text/javascript" src="@{'/public/js/ueditor/ueditor.config.js'}"></script>
+<script type="text/javascript" src="@{'/public/js/ueditor/ueditor.all.js'}"></script>
+<script type="text/javascript">
+</script>
+`
+<div class="navbar-inner">
+</div>
+<div class="container">
+	<!-- 左菜单 -->
+	`t leftMenusTag()
+	<!-- 主内容 -->
+	<div class="content">
+	<form action="@{AdminController.publishLostAndFound()}" method="post">
+	<input type="hidden" name="announcementsId" value="${lostAndFound==null?"":lostAndFound.id}">
+	<div  id="J_pbox_form_box">
+	<h3 class="title" date="">失物招领-发布</h3>
+            <div class="portlet-box-body">
+                <div class="pbox-form-list">
+                    <ul>
+                    	<li>
+                           <label>标题：</label>
+                           <div class="pbox-controls">
+                               <input name="title" type="text" class="defaultInput goodName Tyz" tyzn="1" value="${lostAndFound==null?"":lostAndFound.title}">
+                           </div>
+                        </li>
+                        <li>
+                           <label>发布时间：</label>
+                           <div class="pbox-controls">
+                               <input class="Tyz" tyzn="1" name="startTime" type="text" id="dateStart" value="${lostAndFound==null?"":lostAndFound.startTime}">
+                           </div>
+                        </li>
+                        <li>
+                            <label>详情介绍：</label>
+                            <div class="pbox-controls">
+                            	<textarea id="descrArea" name="contents" style="height:500px;width:700px" class="Tyz" tyzn="1" value="${lostAndFound==null?"":lostAndFound.contents}"></textarea>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="pbox-controls">
+                        <input type="submit" value="确定" class="defaultBtn submit flashpurchase TyzAutoYz" tyzroomid="J_pbox_form_box"/>
+                        <a type="submit" class="defaultBtn submit flashpurchase TyzAutoYz btn-green"/>预览</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </form>
+        </div>
+        <!-- h20 -->
+        <div class="h20"></div>
+</div>

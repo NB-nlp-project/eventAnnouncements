@@ -15,8 +15,8 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.playframework.playclipse.playNature</nature>
 	</natures>
-	<linkedResources><link><name>Japid</name><type>2</type><location>/home/gwz/java/play/modules/Japid/app</location></link>
-<link><name>conf/Japid</name><type>2</type><location>/home/gwz/java/play/modules/Japid/conf</location></link>
-<link><name>docviewer</name><type>2</type><location>/home/gwz/java/play/modules/docviewer/app</location></link>
+	<linkedResources><link><name>Japid</name><type>2</type><location>D:/java/play/modules/Japid/app</location></link>
+<link><name>conf/Japid</name><type>2</type><location>D:/java/play/modules/Japid/conf</location></link>
+<link><name>docviewer</name><type>2</type><location>D:/java/play/modules/docviewer/app</location></link>
 </linkedResources>
 </projectDescription>

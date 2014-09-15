@@ -89,29 +89,44 @@ p("<div class=\"sidebar\">\n" +
 "	<div class=\"item open\">\n" + 
 "		<a href=\"#\" class=\"title\">系统管理</a>\n" + 
 "		<ul>\n" + 
-"            <li><a href=\"");// line 1, leftMenusTag.html
-		p(lookup("AdminController.personCenter", new Object[]{}));// line 5, leftMenusTag.html
-		p("\" ");// line 5, leftMenusTag.html
-		p("personCenter".equals(request.actionMethod)?" name='index'":"");// line 5, leftMenusTag.html
+"            <li><a href=\"");// line 1, japidviews\AdminController\leftMenusTag.html
+		p(lookup("AdminController.personCenter", new Object[]{}));// line 5, japidviews\AdminController\leftMenusTag.html
+		p("\" ");// line 5, japidviews\AdminController\leftMenusTag.html
+		p("personCenter".equals(request.actionMethod)?" name='index'":"");// line 5, japidviews\AdminController\leftMenusTag.html
 		p(">账号管理</a></li>\n" + 
 "		</ul>\n" + 
 "	</div>\n" + 
 "	<div class=\"item open\">\n" + 
 "		<a href=\"#\" class=\"title\">活动管理</a>\n" + 
 "		<ul>\n" + 
-"            <li><a href=\"");// line 5, leftMenusTag.html
-		p(lookup("AdminController.flashPurchase", new Object[]{}));// line 11, leftMenusTag.html
-		p("\" ");// line 11, leftMenusTag.html
-		p("flashPurchase".equals(request.actionMethod)?" name='index'":"");// line 11, leftMenusTag.html
+"            <li><a href=\"");// line 5, japidviews\AdminController\leftMenusTag.html
+		p(lookup("AdminController.flashPurchase", new Object[]{}));// line 11, japidviews\AdminController\leftMenusTag.html
+		p("\" ");// line 11, japidviews\AdminController\leftMenusTag.html
+		p("flashPurchase".equals(request.actionMethod)?" name='index'":"");// line 11, japidviews\AdminController\leftMenusTag.html
 		p(">活动发布</a></li>\n" + 
-"            <li><a href=\"");// line 11, leftMenusTag.html
-		p(lookup("AdminController.flashPurchaseList", new Object[]{}));// line 12, leftMenusTag.html
-		p("\" ");// line 12, leftMenusTag.html
-		p("flashPurchaseList".equals(request.actionMethod)?" name='index'":"");// line 12, leftMenusTag.html
+"            <li><a href=\"");// line 11, japidviews\AdminController\leftMenusTag.html
+		p(lookup("AdminController.flashPurchaseList", new Object[]{}));// line 12, japidviews\AdminController\leftMenusTag.html
+		p("\" ");// line 12, japidviews\AdminController\leftMenusTag.html
+		p("flashPurchaseList".equals(request.actionMethod)?" name='index'":"");// line 12, japidviews\AdminController\leftMenusTag.html
 		p(">发布活动列表</a></li>\n" + 
 "		</ul>\n" + 
 "	</div>\n" + 
-"</div>");// line 12, leftMenusTag.html
+"	<div class=\"item open\">\n" + 
+"		<a href=\"#\" class=\"title\">失物招领</a>\n" + 
+"		<ul>\n" + 
+"            <li><a href=\"");// line 12, japidviews\AdminController\leftMenusTag.html
+		p(lookup("AdminController.lostAndFound", new Object[]{}));// line 18, japidviews\AdminController\leftMenusTag.html
+		p("\" ");// line 18, japidviews\AdminController\leftMenusTag.html
+		p("lostAndFound".equals(request.actionMethod)?" name='index'":"");// line 18, japidviews\AdminController\leftMenusTag.html
+		p(">失物招领-发布</a></li>\n" + 
+"            <li><a href=\"");// line 18, japidviews\AdminController\leftMenusTag.html
+		p(lookup("AdminController.lostAndFoundList", new Object[]{}));// line 19, japidviews\AdminController\leftMenusTag.html
+		p("\" ");// line 19, japidviews\AdminController\leftMenusTag.html
+		p("lostAndFoundList".equals(request.actionMethod)?" name='index'":"");// line 19, japidviews\AdminController\leftMenusTag.html
+		p(">失物招领-列表</a></li>\n" + 
+"		</ul>\n" + 
+"	</div>\n" + 
+"</div>");// line 19, japidviews\AdminController\leftMenusTag.html
 		
 		endDoLayout(sourceTemplate);
 	}

@@ -103,8 +103,8 @@ p("<!DOCTYPE html>\n" +
 "		</div>\n" + 
 "		<div class=\"content\">\n" + 
 "			<!-- BEGIN LOGIN FORM -->\n" + 
-"			<form class=\"form-vertical login-form\" action=\"");// line 1, loginPage.html
-		p(lookup("Application.loginFromWebsite", new Object[]{}));// line 19, loginPage.html
+"			<form class=\"form-vertical login-form\" action=\"");// line 1, japidviews\Application\loginPage.html
+		p(lookup("Application.loginFromWebsite", new Object[]{}));// line 19, japidviews\Application\loginPage.html
 		p("\" method=\"post\" novalidate=\"novalidate\">\n" + 
 "				<h3 class=\"form-title\">用户登录</h3>\n" + 
 "				<!-- <div class=\"alert alert-error hide\">\n" + 
@@ -139,7 +139,7 @@ p("<!DOCTYPE html>\n" +
 "		</div>\n" + 
 "	</div>\n" + 
 "</body>\n" + 
-"</html>");// line 19, loginPage.html
+"</html>");// line 19, japidviews\Application\loginPage.html
 		
 		endDoLayout(sourceTemplate);
 	}

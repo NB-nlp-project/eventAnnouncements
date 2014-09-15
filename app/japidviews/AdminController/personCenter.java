@@ -86,16 +86,16 @@ public class personCenter extends backStageLayout
 
 	@Override protected void doLayout() {
 		beginDoLayout(sourceTemplate);
-;// line 1, personCenter.html
-Person currPerson = getCurrentPerson();// line 3, personCenter.html
-// line 5, personCenter.html
-// line 6, personCenter.html
+;// line 1, japidviews\AdminController\personCenter.html
+Person currPerson = getCurrentPerson();// line 3, japidviews\AdminController\personCenter.html
+// line 5, japidviews\AdminController\personCenter.html
+// line 6, japidviews\AdminController\personCenter.html
 		p("<div class=\"navbar-inner\">\n" + 
 "</div>\n" + 
 "<div class=\"container\">\n" + 
 "	<!-- 左菜单 -->\n" + 
-"	");// line 12, personCenter.html
-		new leftMenusTag(personCenter.this).render(); // line 17, personCenter.html// line 17, personCenter.html
+"	");// line 12, japidviews\AdminController\personCenter.html
+		new leftMenusTag(personCenter.this).render(); // line 17, japidviews\AdminController\personCenter.html// line 17, japidviews\AdminController\personCenter.html
 		p("	<!-- 主内容 -->\n" + 
 "	<div class=\"content\">\n" + 
 "        <div class=\"constr fix\">\n" + 
@@ -108,22 +108,22 @@ Person currPerson = getCurrentPerson();// line 3, personCenter.html
 "                    <div class=\"ml20 pl10 pt10\">\n" + 
 "                    	<p class=\"ml10 pl5 pb10\">\n" + 
 "                        	登录名：\n" + 
-"                            <span class=\"inline_five\">");// line 17, personCenter.html
-		p(currPerson.loginName);// line 30, personCenter.html
+"                            <span class=\"inline_five\">");// line 17, japidviews\AdminController\personCenter.html
+		p(currPerson.loginName);// line 30, japidviews\AdminController\personCenter.html
 		p("</span>\n" + 
 "                        </p>\n" + 
 "                        <p>\n" + 
 "                        	上次登录：\n" + 
-"                             <span class=\"inline_five\">");// line 30, personCenter.html
-		p(formatDate(null == currPerson.lastLoginTime ? currPerson.createTime : currPerson.lastLoginTime, "yyyy年MM月dd日 HH:mm:ss"));// line 34, personCenter.html
+"                             <span class=\"inline_five\">");// line 30, japidviews\AdminController\personCenter.html
+		p(formatDate(null == currPerson.lastLoginTime ? currPerson.createTime : currPerson.lastLoginTime, "yyyy年MM月dd日 HH:mm:ss"));// line 34, japidviews\AdminController\personCenter.html
 		p("</span>\n" + 
 "                        </p>\n" + 
 "                    </div>\n" + 
 "                </div>\n" + 
 "            </article> \n" + 
 "			<article class=\"pl10 mt20 mb20\">\n" + 
-"			<form action=\"");// line 34, personCenter.html
-		p(lookup("AdminController.savePassword", new Object[]{}));// line 40, personCenter.html
+"			<form action=\"");// line 34, japidviews\AdminController\personCenter.html
+		p(lookup("AdminController.savePassword", new Object[]{}));// line 40, japidviews\AdminController\personCenter.html
 		p("\" method=\"post\">\n" + 
 "				<ul>\n" + 
 "					<li class=\"mb15\">\n" + 
@@ -149,8 +149,8 @@ Person currPerson = getCurrentPerson();// line 3, personCenter.html
 "					</li>\n" + 
 "				</ul>\n" + 
 "				<div class=\"pt10 ml20\">\n" + 
-"					<p class=\"pt10 ml20\">");// line 40, personCenter.html
-		p(flash.get("tips"));// line 65, personCenter.html
+"					<p class=\"pt10 ml20\">");// line 40, japidviews\AdminController\personCenter.html
+		p(flash.get("tips"));// line 65, japidviews\AdminController\personCenter.html
 		p("</p>\n" + 
 "					<input class=\"bluebtn btn_m bdrad3\" type=\"submit\" value=\"修改密码\"/>\n" + 
 "				</div>\n" + 
@@ -158,23 +158,23 @@ Person currPerson = getCurrentPerson();// line 3, personCenter.html
 "			</article>\n" + 
 "		</section>\n" + 
 "	</div>\n" + 
-"</div>");// line 65, personCenter.html
+"</div>");// line 65, japidviews\AdminController\personCenter.html
 		
 		endDoLayout(sourceTemplate);
 	}
 
 	@Override protected void moreJSLink() {
-		// line 6, personCenter.html
-		p("");// line 6, personCenter.html
+		// line 6, japidviews\AdminController\personCenter.html
+		p("");// line 6, japidviews\AdminController\personCenter.html
 		p("<script>\n" + 
 "main.setSidebarHover(\"index\");\n" + 
-"</script>\n");// line 7, personCenter.html
-		p("");// line 11, personCenter.html
+"</script>\n");// line 7, japidviews\AdminController\personCenter.html
+		p("");// line 11, japidviews\AdminController\personCenter.html
 		;
 	}
 	@Override protected void title() {
-		// line 5, personCenter.html
-		p("后台管理-账号管理");// line 5, personCenter.html
+		// line 5, japidviews\AdminController\personCenter.html
+		p("后台管理-账号管理");// line 5, japidviews\AdminController\personCenter.html
 		;
 	}
 }

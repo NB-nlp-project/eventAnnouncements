@@ -89,22 +89,22 @@ public class flashPurchase extends backStageLayout
 
 	@Override protected void doLayout() {
 		beginDoLayout(sourceTemplate);
-;// line 1, flashPurchase.html
-// line 5, flashPurchase.html
-// line 6, flashPurchase.html
+;// line 1, japidviews\AdminController\flashPurchase.html
+// line 5, japidviews\AdminController\flashPurchase.html
+// line 6, japidviews\AdminController\flashPurchase.html
 		p("<div class=\"navbar-inner\">\n" + 
 "</div>\n" + 
 "<div class=\"container\">\n" + 
 "	<!-- 左菜单 -->\n" + 
-"	");// line 16, flashPurchase.html
-		new leftMenusTag(flashPurchase.this).render(); // line 21, flashPurchase.html// line 21, flashPurchase.html
+"	");// line 16, japidviews\AdminController\flashPurchase.html
+		new leftMenusTag(flashPurchase.this).render(); // line 21, japidviews\AdminController\flashPurchase.html// line 21, japidviews\AdminController\flashPurchase.html
 		p("	<!-- 主内容 -->\n" + 
 "	<div class=\"content\">\n" + 
-"	<form action=\"");// line 21, flashPurchase.html
-		p(lookup("AdminController.publishAnnouncements", new Object[]{}));// line 24, flashPurchase.html
+"	<form action=\"");// line 21, japidviews\AdminController\flashPurchase.html
+		p(lookup("AdminController.publishAnnouncements", new Object[]{}));// line 24, japidviews\AdminController\flashPurchase.html
 		p("\" method=\"post\">\n" + 
-"	<input type=\"hidden\" name=\"announcementsId\" value=\"");// line 24, flashPurchase.html
-		p(announcements==null?"":announcements.id);// line 25, flashPurchase.html
+"	<input type=\"hidden\" name=\"announcementsId\" value=\"");// line 24, japidviews\AdminController\flashPurchase.html
+		p(announcements==null?"":announcements.id);// line 25, japidviews\AdminController\flashPurchase.html
 		p("\">\n" + 
 "	<div  id=\"J_pbox_form_box\">\n" + 
 "	<h3 class=\"title\" date=\"\">活动发布</h3>\n" + 
@@ -114,28 +114,28 @@ public class flashPurchase extends backStageLayout
 "                    	<li>\n" + 
 "                           <label>活动标题：</label>\n" + 
 "                           <div class=\"pbox-controls\">\n" + 
-"                               <input name=\"title\" type=\"text\" class=\"defaultInput goodName Tyz\" tyzn=\"1\" value=\"");// line 25, flashPurchase.html
-		p(announcements==null?"":announcements.title);// line 34, flashPurchase.html
+"                               <input name=\"title\" type=\"text\" class=\"defaultInput goodName Tyz\" tyzn=\"1\" value=\"");// line 25, japidviews\AdminController\flashPurchase.html
+		p(announcements==null?"":announcements.title);// line 34, japidviews\AdminController\flashPurchase.html
 		p("\">\n" + 
 "                           </div>\n" + 
 "                        </li>\n" + 
 "                        <li>\n" + 
 "                           <label>活动时间：</label>\n" + 
 "                           <div class=\"pbox-controls\">\n" + 
-"                               <input class=\"Tyz\" tyzn=\"1\" name=\"startTime\" type=\"text\" id=\"dateStart\" value=\"");// line 34, flashPurchase.html
-		p(announcements==null?"":announcements.startTime);// line 40, flashPurchase.html
+"                               <input class=\"Tyz\" tyzn=\"1\" name=\"startTime\" type=\"text\" id=\"dateStart\" value=\"");// line 34, japidviews\AdminController\flashPurchase.html
+		p(announcements==null?"":announcements.startTime);// line 40, japidviews\AdminController\flashPurchase.html
 		p("\">\n" + 
 "                               <span class=\"text-inline\">到</span>\n" + 
-"                               <input class=\"Tyz\" tyzn=\"1\" name=\"endTime\" type=\"text\" id=\"dateEnd\" value=\"");// line 40, flashPurchase.html
-		p(announcements==null?"":announcements.endTime);// line 42, flashPurchase.html
+"                               <input class=\"Tyz\" tyzn=\"1\" name=\"endTime\" type=\"text\" id=\"dateEnd\" value=\"");// line 40, japidviews\AdminController\flashPurchase.html
+		p(announcements==null?"":announcements.endTime);// line 42, japidviews\AdminController\flashPurchase.html
 		p("\">\n" + 
 "                           </div>\n" + 
 "                        </li>\n" + 
 "                        <li>\n" + 
 "                            <label>详情介绍：</label>\n" + 
 "                            <div class=\"pbox-controls\">\n" + 
-"                            	");// line 42, flashPurchase.html
-		new editorTag(flashPurchase.this).render(announcements); // line 48, flashPurchase.html// line 48, flashPurchase.html
+"                            	");// line 42, japidviews\AdminController\flashPurchase.html
+		new editorTag(flashPurchase.this).render(announcements); // line 48, japidviews\AdminController\flashPurchase.html// line 48, japidviews\AdminController\flashPurchase.html
 		p("                            </div>\n" + 
 "                        </li>\n" + 
 "                    </ul>\n" + 
@@ -150,39 +150,39 @@ public class flashPurchase extends backStageLayout
 "        </div>\n" + 
 "        <!-- h20 -->\n" + 
 "        <div class=\"h20\"></div>\n" + 
-"</div>\n");// line 48, flashPurchase.html
+"</div>\n");// line 48, japidviews\AdminController\flashPurchase.html
 		
 		endDoLayout(sourceTemplate);
 	}
 
 	@Override protected void moreJSLink() {
-		// line 6, flashPurchase.html
-		p("<script type=\"text/javascript\" src=\"");// line 6, flashPurchase.html
-		p(lookupStatic("/public/frontEnd/js/swfupload/swfupload/swfupload.js"));// line 7, flashPurchase.html
+		// line 6, japidviews\AdminController\flashPurchase.html
+		p("<script type=\"text/javascript\" src=\"");// line 6, japidviews\AdminController\flashPurchase.html
+		p(lookupStatic("/public/frontEnd/js/swfupload/swfupload/swfupload.js"));// line 7, japidviews\AdminController\flashPurchase.html
 		p("\"></script>\n" + 
-"<script type=\"text/javascript\" src=\"");// line 7, flashPurchase.html
-		p(lookupStatic("/public/frontEnd/js/swfupload/js/swfupload.queue.js"));// line 8, flashPurchase.html
+"<script type=\"text/javascript\" src=\"");// line 7, japidviews\AdminController\flashPurchase.html
+		p(lookupStatic("/public/frontEnd/js/swfupload/js/swfupload.queue.js"));// line 8, japidviews\AdminController\flashPurchase.html
 		p("\"></script>\n" + 
-"<script type=\"text/javascript\" src=\"");// line 8, flashPurchase.html
-		p(lookupStatic("/public/frontEnd/js/swfupload/js/fileprogress.js"));// line 9, flashPurchase.html
+"<script type=\"text/javascript\" src=\"");// line 8, japidviews\AdminController\flashPurchase.html
+		p(lookupStatic("/public/frontEnd/js/swfupload/js/fileprogress.js"));// line 9, japidviews\AdminController\flashPurchase.html
 		p("\"></script>\n" + 
-"<script type=\"text/javascript\" src=\"");// line 9, flashPurchase.html
-		p(lookupStatic("/public/frontEnd/js/swfupload/js/handlers.js"));// line 10, flashPurchase.html
+"<script type=\"text/javascript\" src=\"");// line 9, japidviews\AdminController\flashPurchase.html
+		p(lookupStatic("/public/frontEnd/js/swfupload/js/handlers.js"));// line 10, japidviews\AdminController\flashPurchase.html
 		p("\"></script>\n" + 
-"<script type=\"text/javascript\" src=\"");// line 10, flashPurchase.html
-		p(lookupStatic("/public/js/ueditor/ueditor.config.js"));// line 11, flashPurchase.html
+"<script type=\"text/javascript\" src=\"");// line 10, japidviews\AdminController\flashPurchase.html
+		p(lookupStatic("/public/js/ueditor/ueditor.config.js"));// line 11, japidviews\AdminController\flashPurchase.html
 		p("\"></script>\n" + 
-"<script type=\"text/javascript\" src=\"");// line 11, flashPurchase.html
-		p(lookupStatic("/public/js/ueditor/ueditor.all.js"));// line 12, flashPurchase.html
+"<script type=\"text/javascript\" src=\"");// line 11, japidviews\AdminController\flashPurchase.html
+		p(lookupStatic("/public/js/ueditor/ueditor.all.js"));// line 12, japidviews\AdminController\flashPurchase.html
 		p("\"></script>\n" + 
 "<script type=\"text/javascript\">\n" + 
 "var ue = UE.getEditor('descrArea');\n" + 
-"</script>\n");// line 12, flashPurchase.html
+"</script>\n");// line 12, japidviews\AdminController\flashPurchase.html
 		;
 	}
 	@Override protected void title() {
-		// line 5, flashPurchase.html
-		p("后台管理");// line 5, flashPurchase.html
+		// line 5, japidviews\AdminController\flashPurchase.html
+		p("后台管理");// line 5, japidviews\AdminController\flashPurchase.html
 		;
 	}
 }

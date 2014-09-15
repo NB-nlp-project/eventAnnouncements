@@ -86,27 +86,27 @@ public class headTag extends cn.bran.play.JapidTemplateBase
 
 	@Override protected void doLayout() {
 		beginDoLayout(sourceTemplate);
-;// line 1, headTag.html
-Person currPerson = getCurrentPerson();// line 2, headTag.html
-if(null != currPerson){// line 3, headTag.html
+;// line 1, japidviews\_tags\headTag.html
+Person currPerson = getCurrentPerson();// line 2, japidviews\_tags\headTag.html
+if(null != currPerson){// line 3, japidviews\_tags\headTag.html
 		p("<header class=\"head\">\n" + 
 "	<div class=\"navbar-inner\">\n" + 
 "    	<div class=\"mt10 r\">\n" + 
-"    	欢迎您，<a href=\"");// line 3, headTag.html
-		p(lookup("AdminController.flashPurchase", new Object[]{}));// line 7, headTag.html
-		p("\">");// line 7, headTag.html
-		p(currPerson.loginName);// line 7, headTag.html
+"    	欢迎您，<a href=\"");// line 3, japidviews\_tags\headTag.html
+		p(lookup("AdminController.flashPurchase", new Object[]{}));// line 7, japidviews\_tags\headTag.html
+		p("\">");// line 7, japidviews\_tags\headTag.html
+		p(currPerson.loginName);// line 7, japidviews\_tags\headTag.html
 		p("</a>！\n" + 
-"    	<a class=\"ml10 wh\" href=\"");// line 7, headTag.html
-		p(lookup("Application.logout", new Object[]{}));// line 8, headTag.html
+"    	<a class=\"ml10 wh\" href=\"");// line 7, japidviews\_tags\headTag.html
+		p(lookup("Application.logout", new Object[]{}));// line 8, japidviews\_tags\headTag.html
 		p("\">退出</a>\n" + 
 "    	</div>\n" + 
-"    	<h1 class=\"mt5 wh l\"><a href=\"");// line 8, headTag.html
-		p(lookup("AdminController.flashPurchase", new Object[]{}));// line 10, headTag.html
+"    	<h1 class=\"mt5 wh l\"><a href=\"");// line 8, japidviews\_tags\headTag.html
+		p(lookup("AdminController.flashPurchase", new Object[]{}));// line 10, japidviews\_tags\headTag.html
 		p("\" class=\"wh tdn\">宁波大学活动发布管理系统</a></h1>\n" + 
 "    </div>\n" + 
-"</header>\n");// line 10, headTag.html
-		}// line 13, headTag.html
+"</header>\n");// line 10, japidviews\_tags\headTag.html
+		}// line 13, japidviews\_tags\headTag.html
 		
 		endDoLayout(sourceTemplate);
 	}

@@ -87,11 +87,11 @@ public class editorTag extends cn.bran.play.JapidTemplateBase
 
 	@Override protected void doLayout() {
 		beginDoLayout(sourceTemplate);
-;// line 1, editorTag.html
+;// line 1, japidviews\_tags\editorTag.html
 		p(" \n" + 
-"<textarea id=\"descrArea\" name=\"contents\" style=\"height:500px;width:700px\" class=\"Tyz\" tyzn=\"1\" value=\"");// line 1, editorTag.html
-		p(announcements==null?"":announcements.contents);// line 3, editorTag.html
-		p("\"></textarea>");// line 3, editorTag.html
+"<textarea id=\"descrArea\" name=\"contents\" style=\"height:500px;width:700px\" class=\"Tyz\" tyzn=\"1\" value=\"");// line 1, japidviews\_tags\editorTag.html
+		p(announcements==null?"":announcements.contents);// line 3, japidviews\_tags\editorTag.html
+		p("\"></textarea>");// line 3, japidviews\_tags\editorTag.html
 		
 		endDoLayout(sourceTemplate);
 	}

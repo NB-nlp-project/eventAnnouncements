@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 
@@ -21,9 +22,10 @@ public class UeditorController extends BaseController {
 
 	public static void controller(String action, String noCache)
 			throws IOException {
+		InputStreamReader read;
 		switch (action.split(",")[1].replaceAll(" ", "")) {
 		case "config":
-			InputStreamReader read = new InputStreamReader(new FileInputStream(
+			read= new InputStreamReader(new FileInputStream(
 					"public/js/ueditor/jsp/config.json"), "utf-8");
 			BufferedReader bufferedReader = new BufferedReader(read);
 			String lineTxt = "";
@@ -35,7 +37,8 @@ public class UeditorController extends BaseController {
 					" ", ""));
 			break;
 		case "uploadimage":
-			System.err.println("11111111");
+			System.err.println(request.params);
+			System.err.println(request.params.get("upfile"));
 			break;
 		default:
 			break;

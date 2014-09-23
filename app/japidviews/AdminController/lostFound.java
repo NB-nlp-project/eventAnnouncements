@@ -20,13 +20,13 @@ import japidviews._layouts.*;
 import models.*;
 import play.mvc.Http.*;
 //
-// NOTE: This file was generated from: japidviews/AdminController/lostAndFound.html
+// NOTE: This file was generated from: japidviews/AdminController/lostFound.html
 // Change to this file will be lost next time the template file is compiled.
 //
 @cn.bran.play.NoEnhance
-public class lostAndFound extends backStageLayout
+public class lostFound extends backStageLayout
 {
-	public static final String sourceTemplate = "japidviews/AdminController/lostAndFound.html";
+	public static final String sourceTemplate = "japidviews/AdminController/lostFound.html";
 	 private void initHeaders() {
 		putHeader("Content-Type", "text/html; charset=utf-8");
 		setContentType("text/html; charset=utf-8");
@@ -48,15 +48,15 @@ public class lostAndFound extends backStageLayout
 // - end of implicit fields with Play 
 
 
-	public lostAndFound() {
+	public lostFound() {
 	super((StringBuilder)null);
 	initHeaders();
 	}
-	public lostAndFound(StringBuilder out) {
+	public lostFound(StringBuilder out) {
 		super(out);
 		initHeaders();
 	}
-	public lostAndFound(cn.bran.japid.template.JapidTemplateBaseWithoutPlay caller) {
+	public lostFound(cn.bran.japid.template.JapidTemplateBaseWithoutPlay caller) {
 		super(caller);
 	}
 
@@ -65,7 +65,7 @@ public class lostAndFound extends backStageLayout
 	public static final String[] argNames = new String[] {/* args of the template*/"lostAndFound",  };
 	public static final String[] argTypes = new String[] {/* arg types of the template*/"LostAndFound",  };
 	public static final Object[] argDefaults= new Object[] {null, };
-	public static java.lang.reflect.Method renderMethod = getRenderMethod(japidviews.AdminController.lostAndFound.class);
+	public static java.lang.reflect.Method renderMethod = getRenderMethod(japidviews.AdminController.lostFound.class);
 
 	{
 		setRenderMethod(renderMethod);
@@ -76,35 +76,35 @@ public class lostAndFound extends backStageLayout
 	}
 ////// end of named args stuff
 
-	private LostAndFound lostAndFound; // line 3, japidviews/AdminController/lostAndFound.html
+	private LostAndFound lostAndFound; // line 3, japidviews/AdminController/lostFound.html
 	public cn.bran.japid.template.RenderResult render(LostAndFound lostAndFound) {
 		this.lostAndFound = lostAndFound;
-		try {super.layout();} catch (RuntimeException __e) { super.handleException(__e);} // line 3, japidviews/AdminController/lostAndFound.html
+		try {super.layout();} catch (RuntimeException __e) { super.handleException(__e);} // line 3, japidviews/AdminController/lostFound.html
 		return getRenderResult();
 	}
 
 	public static cn.bran.japid.template.RenderResult apply(LostAndFound lostAndFound) {
-		return new lostAndFound().render(lostAndFound);
+		return new lostFound().render(lostAndFound);
 	}
 
 	@Override protected void doLayout() {
 		beginDoLayout(sourceTemplate);
-;// line 1, japidviews\AdminController\lostAndFound.html
-// line 5, japidviews\AdminController\lostAndFound.html
-// line 6, japidviews\AdminController\lostAndFound.html
+;// line 1, japidviews\AdminController\lostFound.html
+// line 5, japidviews\AdminController\lostFound.html
+// line 6, japidviews\AdminController\lostFound.html
 		p("<div class=\"navbar-inner\">\n" + 
 "</div>\n" + 
 "<div class=\"container\">\n" + 
 "	<!-- 左菜单 -->\n" + 
-"	");// line 15, japidviews\AdminController\lostAndFound.html
-		new leftMenusTag(lostAndFound.this).render(); // line 20, japidviews\AdminController\lostAndFound.html// line 20, japidviews\AdminController\lostAndFound.html
+"	");// line 15, japidviews\AdminController\lostFound.html
+		new leftMenusTag(lostFound.this).render(); // line 20, japidviews\AdminController\lostFound.html// line 20, japidviews\AdminController\lostFound.html
 		p("	<!-- 主内容 -->\n" + 
 "	<div class=\"content\">\n" + 
-"	<form action=\"");// line 20, japidviews\AdminController\lostAndFound.html
-		p(lookup("AdminController.publishLostAndFound", new Object[]{}));// line 23, japidviews\AdminController\lostAndFound.html
+"	<form action=\"");// line 20, japidviews\AdminController\lostFound.html
+		p(lookup("AdminController.publishLostAndFound", new Object[]{}));// line 23, japidviews\AdminController\lostFound.html
 		p("\" method=\"post\">\n" + 
-"	<input type=\"hidden\" name=\"announcementsId\" value=\"");// line 23, japidviews\AdminController\lostAndFound.html
-		p(lostAndFound==null?"":lostAndFound.id);// line 24, japidviews\AdminController\lostAndFound.html
+"	<input type=\"hidden\" name=\"announcementsId\" value=\"");// line 23, japidviews\AdminController\lostFound.html
+		p(lostAndFound==null?"":lostAndFound.id);// line 24, japidviews\AdminController\lostFound.html
 		p("\">\n" + 
 "	<div  id=\"J_pbox_form_box\">\n" + 
 "	<h3 class=\"title\" date=\"\">失物招领-发布</h3>\n" + 
@@ -114,24 +114,24 @@ public class lostAndFound extends backStageLayout
 "                    	<li>\n" + 
 "                           <label>标题：</label>\n" + 
 "                           <div class=\"pbox-controls\">\n" + 
-"                               <input name=\"title\" type=\"text\" class=\"defaultInput goodName Tyz\" tyzn=\"1\" value=\"");// line 24, japidviews\AdminController\lostAndFound.html
-		p(lostAndFound==null?"":lostAndFound.title);// line 33, japidviews\AdminController\lostAndFound.html
+"                               <input name=\"title\" type=\"text\" class=\"defaultInput goodName Tyz\" tyzn=\"1\" value=\"");// line 24, japidviews\AdminController\lostFound.html
+		p(lostAndFound==null?"":lostAndFound.title);// line 33, japidviews\AdminController\lostFound.html
 		p("\">\n" + 
 "                           </div>\n" + 
 "                        </li>\n" + 
 "                        <li>\n" + 
 "                           <label>发布时间：</label>\n" + 
 "                           <div class=\"pbox-controls\">\n" + 
-"                               <input class=\"Tyz\" tyzn=\"1\" name=\"startTime\" type=\"text\" id=\"dateStart\" value=\"");// line 33, japidviews\AdminController\lostAndFound.html
-		p(lostAndFound==null?"":lostAndFound.startTime);// line 39, japidviews\AdminController\lostAndFound.html
+"                               <input class=\"Tyz\" tyzn=\"1\" name=\"startTime\" type=\"text\" id=\"dateStart\" value=\"");// line 33, japidviews\AdminController\lostFound.html
+		p(lostAndFound==null?"":lostAndFound.startTime);// line 39, japidviews\AdminController\lostFound.html
 		p("\">\n" + 
 "                           </div>\n" + 
 "                        </li>\n" + 
 "                        <li>\n" + 
 "                            <label>详情介绍：</label>\n" + 
 "                            <div class=\"pbox-controls\">\n" + 
-"                            	<textarea id=\"descrArea\" name=\"contents\" style=\"height:500px;width:700px\" class=\"Tyz\" tyzn=\"1\" value=\"");// line 39, japidviews\AdminController\lostAndFound.html
-		p(lostAndFound==null?"":lostAndFound.contents);// line 45, japidviews\AdminController\lostAndFound.html
+"                            	<textarea id=\"descrArea\" name=\"contents\" style=\"height:500px;width:700px\" class=\"Tyz\" tyzn=\"1\" value=\"");// line 39, japidviews\AdminController\lostFound.html
+		p(lostAndFound==null?"":lostAndFound.contents);// line 45, japidviews\AdminController\lostFound.html
 		p("\"></textarea>\n" + 
 "                            </div>\n" + 
 "                        </li>\n" + 
@@ -147,38 +147,38 @@ public class lostAndFound extends backStageLayout
 "        </div>\n" + 
 "        <!-- h20 -->\n" + 
 "        <div class=\"h20\"></div>\n" + 
-"</div>\n");// line 45, japidviews\AdminController\lostAndFound.html
+"</div>\n");// line 45, japidviews\AdminController\lostFound.html
 		
 		endDoLayout(sourceTemplate);
 	}
 
 	@Override protected void moreJSLink() {
-		// line 6, japidviews\AdminController\lostAndFound.html
-		p("<script type=\"text/javascript\" src=\"");// line 6, japidviews\AdminController\lostAndFound.html
-		p(lookupStatic("/public/frontEnd/js/swfupload/swfupload/swfupload.js"));// line 7, japidviews\AdminController\lostAndFound.html
+		// line 6, japidviews\AdminController\lostFound.html
+		p("<script type=\"text/javascript\" src=\"");// line 6, japidviews\AdminController\lostFound.html
+		p(lookupStatic("/public/frontEnd/js/swfupload/swfupload/swfupload.js"));// line 7, japidviews\AdminController\lostFound.html
 		p("\"></script>\n" + 
-"<script type=\"text/javascript\" src=\"");// line 7, japidviews\AdminController\lostAndFound.html
-		p(lookupStatic("/public/frontEnd/js/swfupload/js/swfupload.queue.js"));// line 8, japidviews\AdminController\lostAndFound.html
+"<script type=\"text/javascript\" src=\"");// line 7, japidviews\AdminController\lostFound.html
+		p(lookupStatic("/public/frontEnd/js/swfupload/js/swfupload.queue.js"));// line 8, japidviews\AdminController\lostFound.html
 		p("\"></script>\n" + 
-"<script type=\"text/javascript\" src=\"");// line 8, japidviews\AdminController\lostAndFound.html
-		p(lookupStatic("/public/frontEnd/js/swfupload/js/fileprogress.js"));// line 9, japidviews\AdminController\lostAndFound.html
+"<script type=\"text/javascript\" src=\"");// line 8, japidviews\AdminController\lostFound.html
+		p(lookupStatic("/public/frontEnd/js/swfupload/js/fileprogress.js"));// line 9, japidviews\AdminController\lostFound.html
 		p("\"></script>\n" + 
-"<script type=\"text/javascript\" src=\"");// line 9, japidviews\AdminController\lostAndFound.html
-		p(lookupStatic("/public/frontEnd/js/swfupload/js/handlers.js"));// line 10, japidviews\AdminController\lostAndFound.html
+"<script type=\"text/javascript\" src=\"");// line 9, japidviews\AdminController\lostFound.html
+		p(lookupStatic("/public/frontEnd/js/swfupload/js/handlers.js"));// line 10, japidviews\AdminController\lostFound.html
 		p("\"></script>\n" + 
-"<script type=\"text/javascript\" src=\"");// line 10, japidviews\AdminController\lostAndFound.html
-		p(lookupStatic("/public/js/ueditor/ueditor.config.js"));// line 11, japidviews\AdminController\lostAndFound.html
+"<script type=\"text/javascript\" src=\"");// line 10, japidviews\AdminController\lostFound.html
+		p(lookupStatic("/public/js/ueditor/ueditor.config.js"));// line 11, japidviews\AdminController\lostFound.html
 		p("\"></script>\n" + 
-"<script type=\"text/javascript\" src=\"");// line 11, japidviews\AdminController\lostAndFound.html
-		p(lookupStatic("/public/js/ueditor/ueditor.all.js"));// line 12, japidviews\AdminController\lostAndFound.html
+"<script type=\"text/javascript\" src=\"");// line 11, japidviews\AdminController\lostFound.html
+		p(lookupStatic("/public/js/ueditor/ueditor.all.js"));// line 12, japidviews\AdminController\lostFound.html
 		p("\"></script>\n" + 
 "<script type=\"text/javascript\">\n" + 
-"</script>\n");// line 12, japidviews\AdminController\lostAndFound.html
+"</script>\n");// line 12, japidviews\AdminController\lostFound.html
 		;
 	}
 	@Override protected void title() {
-		// line 5, japidviews\AdminController\lostAndFound.html
-		p("后台管理");// line 5, japidviews\AdminController\lostAndFound.html
+		// line 5, japidviews\AdminController\lostFound.html
+		p("后台管理");// line 5, japidviews\AdminController\lostFound.html
 		;
 	}
 }

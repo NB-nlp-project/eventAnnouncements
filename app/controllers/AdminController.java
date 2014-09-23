@@ -99,11 +99,11 @@ public class AdminController extends BaseController {
 
 	}
 
-	public static void lostAndFound(long goodId) {
+	public static void lostFound(long goodId) {
 		renderJapid(LostAndFound.findOneById(goodId));
 	}
 
-	public static void lostAndFoundList(Integer page) {
+	public static void lostFoundList(Integer page) {
 		if (page == null) {
 			page = 1;
 		}
